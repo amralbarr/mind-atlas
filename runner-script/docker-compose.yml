@@ -1,0 +1,59 @@
+name: mind-atlas
+
+services:
+  link-sweep-watcher:
+    build: .
+    container_name: mind-atlas-link-sweep-watcher
+    restart: unless-stopped
+    volumes:
+      # Mount the whole engineering/ vault (two levels up from this file) at
+      # /vault -- link_sweep.py's ROOT resolves relative to its own location
+      # inside that mount, so this must land exactly on the `engineering/`
+      # directory, not a parent or child of it.
+      - ..:/vault
+    # LINK_SWEEP_DEBOUNCE / LINK_SWEEP_POLL_INTERVAL env vars override
+    # watch_and_link.py's own defaults (3.0s each) if you ever want a
+    # different balance of responsiveness vs. CPU -- left unset here so the
+    # script's defaults are the single source of truth.
+    environment:
+      - PORT=${PORT:-8080}
+    # Reserved for a future HTTP/webhook endpoint on the watcher -- no code
+    # listens on this port yet. Configure via .env (see .env.example).
+    ports:
+      - "${PORT:-8080}:8080"
+
+  # One-off manual invocations, sharing the watcher's image -- none of
+  # these need watchdog's background-process trust level (all three are
+  # pure stdlib / one-time fixes), so all are safe to run in Docker, unlike
+  # git_sync.py (see its own docstring: deliberately host-native, holds
+  # live git push credentials). `profiles: ["manual"]` keeps these out of
+  # a plain `docker compose up` -- invoke explicitly:
+  #   docker compose run --rm link-sweep --apply
+  #   docker compose run --rm link-sweep --apply --term "BM25"
+  #   docker compose run --rm link-repair --apply
+  #   docker compose run --rm repair-self-link-bleed
+  link-sweep:
+    build: .
+    profiles: ["manual"]
+    entrypoint: ["python3", "/vault/scripts/link_sweep.py"]
+    volumes:
+      - ..:/vault
+
+  # Fixes EXISTING links whose relative path is wrong (link_sweep.py only
+  # ever adds a new link to bare text -- it never touches a link that
+  # already exists, correct or broken). watch_and_link.py already runs
+  # this automatically, scoped to whatever file just changed; this profile
+  # is for an ad-hoc vault-wide pass instead.
+  link-repair:
+    build: .
+    profiles: ["manual"]
+    entrypoint: ["python3", "/vault/scripts/link_repair.py"]
+    volumes:
+      - ..:/vault
+
+  repair-self-link-bleed:
+    build: .
+    profiles: ["manual"]
+    entrypoint: ["python3", "/vault/scripts/repair_self_link_bleed.py"]
+    volumes:
+      - ..:/vault
