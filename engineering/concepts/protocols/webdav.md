@@ -74,7 +74,7 @@ Host: dav.example.com
 
 ## Authentication
 
-WebDAV relies on standard HTTP [authentication](../security/auth/authentication.md) mechanisms:
+WebDAV relies on standard [HTTP](../networking/http.md) [authentication](../security/auth/authentication.md) mechanisms:
 
 | Method | Notes |
 |---|---|
@@ -83,7 +83,7 @@ WebDAV relies on standard HTTP [authentication](../security/auth/authentication.
 | **Bearer Token** | OAuth2 / [JWT](../security/auth/jwt.md) — used by modern WebDAV servers (e.g. Nextcloud with OIDC) |
 | **App Passwords** | Server-generated per-client tokens (Nextcloud, ownCloud) — revocable without changing the user's main password |
 
-Always use **[HTTPS](../networking/https.md)** — WebDAV credentials in HTTP headers are trivially intercepted over plain HTTP.
+Always use **[HTTPS](../networking/https.md)** — WebDAV credentials in [HTTP](../networking/http.md) headers are trivially intercepted over plain HTTP.
 
 ## Python Client
 

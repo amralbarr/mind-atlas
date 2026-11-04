@@ -26,7 +26,7 @@ Every Azure OpenAI **deployment** (a named instance of a specific model version)
 
 This is distinct from the model's [context window](../../ai/generation/context-window.md) itself (the max tokens *one call* can process) — TPM/RPM is an *infrastructure* throttle on aggregate usage over time, the [context window](../../ai/generation/context-window.md) is an *architectural* ceiling per call; see [Context Window — vs. token limit vs. rate limit](../../ai/generation/context-window.md#context-window-vs-token-limit-vs-rate-limit) for the general three-way distinction this specializes.
 
-**The practical consequence:** since TPM usually bites first for long RAG prompts, capping prompt and output tokens per request (trimming retrieved context to what's actually needed, setting a `max_tokens` ceiling on generation) directly protects TPM headroom — a cheap, high-leverage lever before reaching for more deployments or capacity.
+**The practical consequence:** since TPM usually bites first for long [RAG](../../ai/rag/rag.md) prompts, capping prompt and output tokens per request (trimming retrieved context to what's actually needed, setting a `max_tokens` ceiling on generation) directly protects TPM headroom — a cheap, high-leverage lever before reaching for more deployments or capacity.
 
 ## Handling a 429
 
@@ -58,7 +58,7 @@ The common production pattern combines both rather than choosing one: **provisio
 ## Common Questions
 
 **If RPM looks fine but requests are still getting throttled, what should you check first?**
-> TPM, not RPM — a RAG workload's bottleneck is overwhelmingly more likely to be token volume (long prompts with substantial retrieved context) than raw request count. Checking RPM alone and concluding "we have headroom" while TPM is actually exhausted is a common, avoidable misdiagnosis.
+> TPM, not RPM — a [RAG](../../ai/rag/rag.md) workload's bottleneck is overwhelmingly more likely to be token volume (long prompts with substantial retrieved context) than raw request count. Checking RPM alone and concluding "we have headroom" while TPM is actually exhausted is a common, avoidable misdiagnosis.
 
 **Does provisioned throughput eliminate the need for retry/backoff logic?**
 > No — PTU reduces the *likelihood* of throttling for the reserved baseline, but any capacity model can still be exhausted under an unexpected spike, and a PTU deployment can still fail for other transient reasons (network issues, a regional incident). [Exponential backoff and jitter](../../backend/resilience/exponential-backoff-and-jitter.md) remains necessary regardless of which billing/capacity model is in use.

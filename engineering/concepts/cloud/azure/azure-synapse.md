@@ -21,12 +21,12 @@ Synapse Spark pools  OR  Databricks   ← transformation/processing (pick one ec
 Synapse SQL pools                     ← serve curated data to BI tools / applications
 ```
 
-Synapse SQL pools are the piece without a direct [Databricks](../data/databricks.md) equivalent in this comparison — [Databricks](../data/databricks.md) is primarily a processing/[Spark](../../distributed-systems/processing/spark.md) platform, while Synapse bundles processing *and* a SQL serving layer together. A team already standardized on [Databricks](../data/databricks.md) for processing would typically still need a separate SQL warehouse ([Databricks](../data/databricks.md) SQL, or another warehouse product) to serve the same "query curated data via SQL" role Synapse SQL pools provide natively.
+Synapse [SQL](../../databases/relational/sql.md) pools are the piece without a direct [Databricks](../data/databricks.md) equivalent in this comparison — [Databricks](../data/databricks.md) is primarily a processing/[Spark](../../distributed-systems/processing/spark.md) platform, while Synapse bundles processing *and* a [SQL](../../databases/relational/sql.md) serving layer together. A team already standardized on [Databricks](../data/databricks.md) for processing would typically still need a separate SQL warehouse ([Databricks](../data/databricks.md) SQL, or another warehouse product) to serve the same "query curated data via SQL" role Synapse SQL pools provide natively.
 
 ## Related
 
-- [ADLS](adls.md) — the storage layer both Synapse Spark and Synapse SQL read from
-- [Spark](../../distributed-systems/processing/spark.md) — the engine behind Synapse Spark pools
+- [ADLS](adls.md) — the storage layer both Synapse [Spark](../../distributed-systems/processing/spark.md) and Synapse SQL read from
+- [Spark](../../distributed-systems/processing/spark.md) — the engine behind Synapse [Spark](../../distributed-systems/processing/spark.md) pools
 - [Databricks](../data/databricks.md) — the overlapping Spark-first alternative
 - [Azure Data Factory](azure-data-factory.md) — the standalone orchestration service Synapse Pipelines is built on
 - [Hadoop vs. Spark vs. Databricks vs. Synapse vs. ADLS/S3/GCS](../../../overviews/cloud/hadoop-spark-databricks-synapse-storage.md) — the full layered picture, including where Synapse fits relative to Microsoft Fabric

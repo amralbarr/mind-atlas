@@ -44,4 +44,4 @@ Neither replaced the other outright — the practical decision is: reach for a d
 - [Embeddings](ingestion/embeddings.md) — NLP's technique for turning text into a numeric, comparable representation
 - [Tokenization](generation/tokenization.md) — the preprocessing step underlying both classical and [LLM](generation/llm.md)-based NLP
 - [RAG](rag/rag.md)
-- [Structured Output](generation/structured-output.md) — how an LLM's free-text NLP output gets turned into the kind of structured fields (entities, categories, scores) a classic NLP API would return natively
+- [Structured Output](generation/structured-output.md) — how an [LLM](generation/llm.md)'s free-text NLP output gets turned into the kind of structured fields (entities, categories, scores) a classic NLP API would return natively

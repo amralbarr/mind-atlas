@@ -29,10 +29,10 @@ Neither is strictly better — the choice is a direct trade of indexing-time cos
 
 | Tool | What it provides |
 |---|---|
-| **spaCy** | Production-grade lemmatization built into its standard pipeline (`token.lemma_`) — includes POS tagging automatically, so it resolves the `"saw"`-as-verb-vs-noun ambiguity correctly out of the box. This is spaCy's answer to word-form reduction; it does not offer stemming at all. |
+| **spaCy** | Production-grade lemmatization built into its standard pipeline (`token.lemma_`) — includes POS tagging automatically, so it resolves the `"saw"`-as-verb-vs-noun ambiguity correctly out of the box. This is spaCy's answer to word-form reduction; it does not offer [stemming](stemming.md) at all. |
 | **NLTK `WordNetLemmatizer`** | Looks words up against the WordNet lexical database; needs the POS tag passed in explicitly for correct results (it defaults to treating every word as a noun otherwise, which silently produces wrong lemmas for verbs/adjectives) |
 | **Stanza** (Stanford [NLP](../../nlp.md)) | Neural pipeline including lemmatization, stronger multilingual support than NLTK's WordNet-based approach |
-| **[Elasticsearch](../../../databases/search/elasticsearch.md) / [OpenSearch](../../../databases/search/opensearch.md)** | No true lemmatizer is built in by default — their language analyzers rely on stemming (see [Elasticsearch](../../../databases/search/elasticsearch.md), [OpenSearch](../../../databases/search/opensearch.md)); a real lemmatizer would be run as a custom pre-processing step before indexing if the use case specifically needs it |
+| **[Elasticsearch](../../../databases/search/elasticsearch.md) / [OpenSearch](../../../databases/search/opensearch.md)** | No true lemmatizer is built in by default — their language analyzers rely on [stemming](stemming.md) (see [Elasticsearch](../../../databases/search/elasticsearch.md), [OpenSearch](../../../databases/search/opensearch.md)); a real lemmatizer would be run as a custom pre-processing step before indexing if the use case specifically needs it |
 
 ## Related
 

@@ -17,11 +17,11 @@ Early in a marketing career, taking on a first client for free — with the expl
 
 ## The "1+1=3" Framing
 
-Some opportunities are explicitly *investments* rather than transactions — accepting below-market terms once, deliberately, in exchange for a name, a category entry, or a portfolio piece that's worth more than the cash difference over time. This only works if it's a calculated, occasional trade — treating every deal this way (or being talked into it repeatedly by clients who exploit the framing) erodes both income and market positioning; see the anti-pattern warning in [Client Selection Criteria](client-selection-criteria.md).
+Some opportunities are explicitly *investments* rather than transactions — accepting below-market terms once, deliberately, in exchange for a name, a category entry, or a portfolio piece that's worth more than the cash difference over time. This only works if it's a calculated, occasional trade — treating every deal this way (or being talked into it repeatedly by clients who exploit the framing) erodes both income and market [positioning](../../../marketing/concepts/fundamentals/positioning.md); see the anti-pattern warning in [Client Selection Criteria](client-selection-criteria.md).
 
 ## Timing: Recognizing "Harvest" Moments
 
-Some opportunities aren't really about the immediate deal — they're a payoff moment for prior positioning (a strong portfolio, a personal brand, a track record) finally converting into a large contract or opportunity. Recognizing when an opportunity is this kind of "harvest," versus another investment-stage opportunity, changes how it should be evaluated and negotiated.
+Some opportunities aren't really about the immediate deal — they're a payoff moment for prior [positioning](../../../marketing/concepts/fundamentals/positioning.md) (a strong portfolio, a personal brand, a track record) finally converting into a large contract or opportunity. Recognizing when an opportunity is this kind of "harvest," versus another investment-stage opportunity, changes how it should be evaluated and negotiated.
 
 ## Common Questions
 

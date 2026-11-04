@@ -4,7 +4,7 @@ Showing two (or more) versions of something to different segments of an audience
 
 ## How It Works
 
-1. Pick **one variable** to change (headline, CTA color, form length) — changing multiple things at once makes it impossible to know which change caused the result.
+1. Pick **one variable** to change (headline, [CTA](../digital-marketing/call-to-action-cta.md) color, form length) — changing multiple things at once makes it impossible to know which change caused the result.
 2. Split traffic randomly between **Control (A)** and **Variant (B)**.
 3. Run until reaching **statistical significance** — enough sample size that the observed difference is unlikely to be random chance.
 4. Ship the winner; if inconclusive, the test didn't have enough traffic/time or the change genuinely didn't matter.
@@ -25,7 +25,7 @@ A test can show B "winning" by a wide margin on day one purely by chance with a 
 ## A/B Test vs. Multivariate Test
 
 - **A/B test** — one variable, two (or a few) versions.
-- **Multivariate test (MVT)** — multiple variables tested in combination simultaneously (e.g. headline × image × CTA), which requires much more traffic to reach significance on each combination but reveals interaction effects a series of A/B tests would miss.
+- **Multivariate test (MVT)** — multiple variables tested in combination simultaneously (e.g. headline × image × [CTA](../digital-marketing/call-to-action-cta.md)), which requires much more traffic to reach significance on each combination but reveals interaction effects a series of A/B tests would miss.
 
 ## Common Questions
 

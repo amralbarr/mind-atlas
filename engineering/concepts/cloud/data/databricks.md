@@ -52,7 +52,7 @@ Silver  — cleaned, deduplicated, schema-validated, joined
 Gold    — business-level aggregates, feature tables, ML-ready datasets
 ```
 
-Each layer is a set of Delta Lake tables. ETL pipelines (Delta Live Tables or notebooks) transform data layer by layer.
+Each layer is a set of [Delta Lake](delta-lake.md) tables. ETL pipelines (Delta Live Tables or notebooks) transform data layer by layer.
 
 ## PySpark — The Python API
 
@@ -80,14 +80,14 @@ Key difference from pandas: [Spark](../../distributed-systems/processing/spark.m
 
 ## Databricks vs Self-Hosted Spark vs Alternatives
 
-| | Databricks | Self-managed Spark (EMR, Dataproc) | Traditional [SQL](../../databases/relational/sql.md) DW (Snowflake, BigQuery) |
+| | Databricks | Self-managed [Spark](../../distributed-systems/processing/spark.md) (EMR, Dataproc) | Traditional [SQL](../../databases/relational/sql.md) DW (Snowflake, BigQuery) |
 |---|---|---|---|
 | Setup | Managed, no infra | You manage the cluster | Fully managed |
-| Delta Lake | Built-in | Bring your own | Proprietary formats |
+| [Delta Lake](delta-lake.md) | Built-in | Bring your own | Proprietary formats |
 | ML / MLflow | First-class | Add separately | Not native |
-| [SQL](../../databases/relational/sql.md) analytics | Yes (Databricks SQL) | Limited | Primary use case |
+| [SQL](../../databases/relational/sql.md) analytics | Yes (Databricks [SQL](../../databases/relational/sql.md)) | Limited | Primary use case |
 | Cost model | DBU (Databricks Units) + cloud compute | Cloud compute only | Query-based pricing |
-| Best for | Data engineering + ML together | Cost-optimized Spark | Pure SQL analytics |
+| Best for | Data engineering + ML together | Cost-optimized [Spark](../../distributed-systems/processing/spark.md) | Pure [SQL](../../databases/relational/sql.md) analytics |
 
 ## In an Enterprise RAG Context
 

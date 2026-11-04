@@ -326,7 +326,7 @@ well-formed JSON  ≠  permitted request  ≠  correct request  ≠  safe to exe
 
 A tool call can pass every Pydantic check and still be a disaster — the right order ID but the wrong customer, an amount within range but larger than what's actually refundable, a request the user never made because a poisoned document told the model to issue it. None of that is a shape problem, so none of it is something a `BaseModel` can catch. [Authentication](../../security/auth/authentication.md), [authorization](../../security/authorization/authorization.md), business-rule checks, destination allowlists, and safe/idempotent execution all have to be enforced separately, in application code — critically, the requester's identity should come from a verified [token](../../security/auth/jwt.md), never from a field inside the same payload Pydantic just validated, since that field is exactly as forgeable as the rest of the tool call.
 
-See **[Deep Dive — What Doesn't Pydantic Validate?](../../../interview/interview-01/21-pydantic-validation-boundaries-deep-dive.md)** for the full layered example (a refund tool with [authorization](../../security/authorization/authorization.md), business-rule, and idempotent-execution checks stacked after Pydantic), plus why a structured LLM extraction passing validation is a shape guarantee, not proof the extracted values are actually correct.
+See **[Deep Dive — What Doesn't Pydantic Validate?](../../../interview/interview-01/21-pydantic-validation-boundaries-deep-dive.md)** for the full layered example (a refund tool with [authorization](../../security/authorization/authorization.md), business-rule, and idempotent-execution checks stacked after Pydantic), plus why a structured [LLM](../../ai/generation/llm.md) extraction passing validation is a shape guarantee, not proof the extracted values are actually correct.
 
 ---
 
@@ -368,7 +368,7 @@ The codebase ecosystem is split between Pydantic v1 and v2. Pydantic v2 is the c
 - [Serialization](../fundamentals/serialization.md) — `model_dump()` / `model_dump_json()` serialize; `model_validate()` / `model_validate_json()` deserialize
 - [JSON vs Dictionary](../fundamentals/json.md) — `model_validate_json()` is the bridge: it takes a [JSON](../fundamentals/json.md) string (text) and returns a typed model instance (memory object)
 - [FastAPI](fastapi.md) — built on Pydantic; every request/response body is a Pydantic model
-- [Structured Output](../../ai/generation/structured-output.md) — LLM-side schema enforcement that complements Pydantic's application-side enforcement
+- [Structured Output](../../ai/generation/structured-output.md) — [LLM](../../ai/generation/llm.md)-side schema enforcement that complements Pydantic's application-side enforcement
 - [Validation Libraries Overview](../../../overviews/programming/validation-libraries.md) — Pydantic vs [class-validator](../../backend/api/class-validator.md) vs [Zod](../typescript/zod.md): when to choose each
 - [Tool Calling](../../ai/agents/tool-calling.md) — tool argument schemas are derived from Pydantic models
 - [Pydantic AI](../../ai/agents/pydantic-ai.md) — the agent framework built on top of Pydantic for type-safe LLM agent construction

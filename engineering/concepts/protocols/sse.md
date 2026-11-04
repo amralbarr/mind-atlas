@@ -11,7 +11,7 @@ SSE is not a separate protocol like [WebSockets](../networking/websockets.md) â€
 | `Content-Type: application/json` (or similar), body sent once, connection closes | `Content-Type: text/event-stream`, connection stays open, body is written incrementally as a series of events |
 | Client gets one complete response | Client receives a stream of discrete `data:` events over time |
 
-Because it's plain [HTTP](../networking/http.md), SSE passes through firewalls, proxies, and load balancers that would block or mishandle a WebSocket upgrade, and it works over HTTP/1.1 and HTTP/2 without special server support.
+Because it's plain [HTTP](../networking/http.md), SSE passes through firewalls, proxies, and load balancers that would block or mishandle a WebSocket upgrade, and it works over [HTTP](../networking/http.md)/1.1 and [HTTP](../networking/http.md)/2 without special server support.
 
 ## Wire Format
 

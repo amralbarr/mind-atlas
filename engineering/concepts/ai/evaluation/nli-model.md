@@ -43,7 +43,7 @@ def check_claim_supported(claim: str, cited_chunk_text: str) -> bool:
     return result["label"] == "ENTAILMENT"
 ```
 
-A system under real request volume often runs the NLI model as the default per-claim check (cheap enough to run on every answer) and escalates to an LLM-as-judge only for borderline or low-confidence NLI scores — the same two-tier pattern [reranking](../retrieval/cross-encoder-reranking.md) uses (a cheap first pass, an expensive second pass only where it's worth the cost).
+A system under real request volume often runs the NLI model as the default per-claim check (cheap enough to run on every answer) and escalates to an [LLM](../generation/llm.md)-as-judge only for borderline or low-confidence NLI scores — the same two-tier pattern [reranking](../retrieval/cross-encoder-reranking.md) uses (a cheap first pass, an expensive second pass only where it's worth the cost).
 
 ## Common Questions
 
@@ -63,4 +63,4 @@ A system under real request volume often runs the NLI model as the default per-c
 - [Embeddings](../ingestion/embeddings.md) / [RAG](../rag/rag.md) — the retrieval step that finds topically similar chunks, which this file distinguishes from logically-entailing chunks
 - [Cross-Encoder](../retrieval/cross-encoder.md) — the general architecture an NLI model is one fine-tuned application of
 - [Cross-Encoder Reranking](../retrieval/cross-encoder-reranking.md) — the other major [cross-encoder](../retrieval/cross-encoder.md) application: query-document relevance instead of premise-hypothesis entailment
-- [LLM Evaluation](llm-evaluation.md) — the LLM-as-judge alternative for the same entailment classification task, when flexibility matters more than latency/cost
+- [LLM Evaluation](llm-evaluation.md) — the [LLM](../generation/llm.md)-as-judge alternative for the same entailment classification task, when flexibility matters more than latency/cost

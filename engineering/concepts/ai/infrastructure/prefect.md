@@ -65,7 +65,7 @@ if __name__ == "__main__":
 > When the team is already Python-heavy and wants pipelines that read like normal Python code (implicit dependencies, native retries/caching as decorators) rather than learning a separate DAG-authoring model — Prefect generally has a gentler learning curve and less configuration ceremony for straightforward pipelines, at the cost of [Airflow](airflow.md)'s much larger, more battle-tested plugin/operator ecosystem for existing enterprise integrations.
 
 **Does Prefect replace the need for [Airflow](airflow.md) entirely?**
-> Not universally — Airflow's maturity, breadth of pre-built operators, and long production track record still matter for large, complex, multi-team pipeline estates. Prefect is a strong default for new, Python-centric pipelines, especially smaller teams that don't need Airflow's full operator ecosystem.
+> Not universally — [Airflow](airflow.md)'s maturity, breadth of pre-built operators, and long production track record still matter for large, complex, multi-team pipeline estates. Prefect is a strong default for new, Python-centric pipelines, especially smaller teams that don't need [Airflow](airflow.md)'s full operator ecosystem.
 
 ## Related
 

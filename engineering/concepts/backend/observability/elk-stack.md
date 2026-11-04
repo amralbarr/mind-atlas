@@ -44,7 +44,7 @@ services:
     ports: ["5601:5601"]
 ```
 
-A minimal Filebeat config to ship container logs into Elasticsearch directly (skipping Logstash entirely for simple cases):
+A minimal Filebeat config to ship container logs into [Elasticsearch](../../databases/search/elasticsearch.md) directly (skipping Logstash entirely for simple cases):
 
 ```yaml
 # filebeat.yml
@@ -64,7 +64,7 @@ service.name: "orders-service" AND log.level: "error" AND @timestamp >= "now-1h"
 ## Common Questions
 
 **Why is this called ELK sometimes and EFK other times?**
-> Same role, different collector: Logstash is heavier and more feature-rich for parsing/enrichment (the "L"); Fluentd/Fluent Bit are lighter-weight alternatives more common in [Kubernetes](../../distributed-systems/kubernetes/ingress.md) (the "F"), especially as a per-node DaemonSet where resource overhead per node matters. Elasticsearch and Kibana stay the same either way.
+> Same role, different collector: Logstash is heavier and more feature-rich for parsing/enrichment (the "L"); Fluentd/Fluent Bit are lighter-weight alternatives more common in [Kubernetes](../../distributed-systems/kubernetes/ingress.md) (the "F"), especially as a per-node DaemonSet where resource overhead per node matters. [Elasticsearch](../../databases/search/elasticsearch.md) and Kibana stay the same either way.
 
 **How does this compare to [Grafana Loki](grafana-loki.md) for logs?**
 > Elasticsearch indexes the full text of every log line, which is powerful but storage/compute-heavy at scale. [Loki](grafana-loki.md) only indexes metadata (labels) and stores log content compressed and unindexed, trading some full-text search flexibility for dramatically lower cost — see [Grafana Loki](grafana-loki.md) for the fuller comparison.

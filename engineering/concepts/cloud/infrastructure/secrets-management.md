@@ -185,7 +185,7 @@ volumes:
 
 ## Local Development Pattern
 
-In production, the application uses managed identity. In development, `DefaultAzureCredential` ([Azure](../azure/azure.md)) or the AWS CLI profile (AWS) provides the same SDK calls against a real vault — no `.env` files with real credentials needed.
+In production, the application uses managed identity. In development, `DefaultAzureCredential` ([Azure](../azure/azure.md)) or the [AWS](aws.md) CLI profile ([AWS](aws.md)) provides the same SDK calls against a real vault — no `.env` files with real credentials needed.
 
 For fully local development without cloud access, use a local secrets file that is `.gitignore`d:
 

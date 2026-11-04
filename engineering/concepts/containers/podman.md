@@ -33,7 +33,7 @@ This is why it's fairly called a **drop-in replacement** rather than a competing
 
 ## Why It Comes Up for a Single-VM Deployment
 
-When the question is "why Docker and not something else" for a project like a Nextcloud stack on one [Azure](../cloud/azure/azure.md) VM, Podman is the direct answer to "isn't there a more secure option?" — same [OCI](oci.md)-compatible images, same Compose-style orchestration, no root daemon. Docker was still chosen here because it's the default assumption in almost every tutorial, base image, and community troubleshooting thread, which matters more for a small, single-VM deployment than the daemon's root requirement does in practice (mitigated by not exposing the Docker socket and not adding untrusted users to the `docker` group).
+When the question is "why [Docker](docker.md) and not something else" for a project like a Nextcloud stack on one [Azure](../cloud/azure/azure.md) VM, Podman is the direct answer to "isn't there a more secure option?" — same [OCI](oci.md)-compatible images, same Compose-style orchestration, no root daemon. [Docker](docker.md) was still chosen here because it's the default assumption in almost every tutorial, base image, and community troubleshooting thread, which matters more for a small, single-VM deployment than the daemon's root requirement does in practice (mitigated by not exposing the Docker socket and not adding untrusted users to the `docker` group).
 
 ## Related
 

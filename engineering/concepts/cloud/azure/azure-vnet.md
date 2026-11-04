@@ -25,8 +25,8 @@ Both let a VNet-resident resource reach a managed [Azure](azure.md) PaaS service
 | | Service Endpoint | Private Endpoint |
 |---|---|---|
 | **What it does** | Routes traffic to the PaaS service over the [Azure](azure.md) backbone, but the service still has a public IP/endpoint | Gives the PaaS service an actual **private IP address inside the VNet** — the public endpoint can be disabled entirely |
-| **Network isolation** | Traffic stays on Azure's backbone, but the service remains reachable from outside the VNet unless firewalled separately | Genuinely private — the service is only reachable through that specific private IP, from networks that can route to it |
-| **[DNS](../../networking/dns.md)** | No change — the service's public DNS name still resolves to its public IP | Requires [Azure](azure.md) Private DNS zone integration so the service's name resolves to the private IP instead |
+| **Network isolation** | Traffic stays on [Azure](azure.md)'s backbone, but the service remains reachable from outside the VNet unless firewalled separately | Genuinely private — the service is only reachable through that specific private IP, from networks that can route to it |
+| **[DNS](../../networking/dns.md)** | No change — the service's public [DNS](../../networking/dns.md) name still resolves to its public IP | Requires [Azure](azure.md) Private [DNS](../../networking/dns.md) zone integration so the service's name resolves to the private IP instead |
 
 For a system with strict data-residency or network-isolation requirements — the kind this handbook's [Azure RAG platform map](../../../interview/interview-01/22-azure-rag-platform-map.md) assumes throughout — Private Endpoints are the default choice: they're what actually lets a service's public endpoint be disabled, closing the gap Service Endpoints leave open.
 
@@ -56,7 +56,7 @@ See [WAF](../../security/attacks/waf.md) for the content-inspection layer and [N
 ## Common Questions
 
 **Does putting a resource inside a VNet make it secure by default?**
-> No — a VNet provides address space and isolation, but with no rules attached, Azure's own [NSG default rules](azure-nsg.md#default-rules-always-present-cannot-be-deleted) still apply (deny all inbound from outside the VNet, allow all within it). Real security comes from the [NSG](azure-nsg.md) rules, private endpoint configuration, and [WAF](../../security/attacks/waf.md) layered on top — the VNet itself is the boundary those controls are scoped to, not a security control on its own.
+> No — a VNet provides address space and isolation, but with no rules attached, [Azure](azure.md)'s own [NSG default rules](azure-nsg.md#default-rules-always-present-cannot-be-deleted) still apply (deny all inbound from outside the VNet, allow all within it). Real security comes from the [NSG](azure-nsg.md) rules, private endpoint configuration, and [WAF](../../security/attacks/waf.md) layered on top — the VNet itself is the boundary those controls are scoped to, not a security control on its own.
 
 **When is VNet peering preferred over a hub-spoke topology with a VPN Gateway?**
 > Peering is the simpler, cheaper option for direct VNet-to-VNet connectivity within Azure, with no bandwidth throttling or gateway cost. A hub-spoke topology (a central "hub" VNet other "spoke" VNets peer with, often with a VPN Gateway or Azure Firewall in the hub) is preferred once there are many VNets needing centralized traffic inspection or connectivity to on-premises networks, rather than a full mesh of direct peerings between every pair.
@@ -66,10 +66,10 @@ See [WAF](../../security/attacks/waf.md) for the content-inspection layer and [N
 
 ## Related
 
-- [NSG](azure-nsg.md) — the firewall rule layer applied within a VNet, at the subnet or NIC level
+- [NSG](azure-nsg.md) — the firewall rule layer applied within a VNet, at the subnet or [NIC](azure-network-interface.md) level
 - [WAF](../../security/attacks/waf.md) — the L7 content-inspection layer that sits upstream of the VNet boundary
-- [Azure Networking: VNet & NSG](networking-vnet-nsg.md) — a concrete, project-specific NSG rule set and port-exposure matrix built on top of a VNet like this one
+- [Azure Networking: VNet & NSG](networking-vnet-nsg.md) — a concrete, project-specific [NSG](azure-nsg.md) rule set and port-exposure matrix built on top of a VNet like this one
 - [Azure Public IP](azure-public-ip.md) — the internet-facing address assigned separately from the VNet's private address space
-- [Azure Network Interface](azure-network-interface.md) — where a VM's VNet membership and NSG association actually attach
+- [Azure Network Interface](azure-network-interface.md) — where a VM's VNet membership and [NSG](azure-nsg.md) association actually attach
 - [Azure RBAC](azure-rbac.md) — identity-based access control, a separate concern from VNet/NSG's network-based access control
 - [Azure RAG Platform Map](../../../interview/interview-01/22-azure-rag-platform-map.md) — VNet, Private Endpoints, and Private DNS as Layer 2 of a full enterprise architecture

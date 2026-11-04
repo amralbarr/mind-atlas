@@ -21,13 +21,13 @@ This is fundamentally **signature and pattern matching**, not an understanding o
 | | |
 |---|---|
 | **Catches well** | Known, common attack patterns arriving as part of the request itself — a classic SQLi string in a form field, a `<script>` tag in a comment body, a scanner probing for a known vulnerable path |
-| **Does not catch** | [DOM-based XSS](xss.md) — the payload never touches the server at all, so a server-side WAF has nothing to inspect; business-logic flaws (a correctly-authenticated user misusing legitimate functionality in a way the app never validated); novel attack patterns that don't match any existing signature; an attack that's syntactically identical to normal use (a legitimate user's search query that happens to contain SQL-like text) |
+| **Does not catch** | [DOM-based XSS](xss.md) — the payload never touches the server at all, so a server-side WAF has nothing to inspect; business-logic flaws (a correctly-authenticated user misusing legitimate functionality in a way the app never validated); novel attack patterns that don't match any existing signature; an attack that's syntactically identical to normal use (a legitimate user's search query that happens to contain [SQL](../../databases/relational/sql.md)-like text) |
 
-The standard framing — already used elsewhere in this handbook for [SQL Injection](sql-injection.md#defenses) — is that a WAF is **a backstop, not a fix**: it catches obviously malicious traffic at the edge, cheaply, before it costs the application anything, but it is never a substitute for parameterized queries, output encoding, or the actual application-level defense the attack class requires. An application with no SQL injection defense other than a WAF is one crafted payload away from a breach the moment it doesn't match an existing rule.
+The standard framing — already used elsewhere in this handbook for [SQL Injection](sql-injection.md#defenses) — is that a WAF is **a backstop, not a fix**: it catches obviously malicious traffic at the edge, cheaply, before it costs the application anything, but it is never a substitute for parameterized queries, output encoding, or the actual application-level defense the attack class requires. An application with no [SQL injection](sql-injection.md) defense other than a WAF is one crafted payload away from a breach the moment it doesn't match an existing rule.
 
 ## False Positives and Tuning
 
-Because detection is pattern-based, a WAF can block entirely legitimate traffic that happens to resemble an attack signature — a user's free-text message that contains the literal words "select" and "from," a developer's support ticket that includes a real SQL error message for debugging purposes. This is why WAFs are deployed in stages, not switched straight to blocking:
+Because detection is pattern-based, a WAF can block entirely legitimate traffic that happens to resemble an attack signature — a user's free-text message that contains the literal words "select" and "from," a developer's support ticket that includes a real [SQL](../../databases/relational/sql.md) error message for debugging purposes. This is why WAFs are deployed in stages, not switched straight to blocking:
 
 1. **Detection/log-only mode** — the WAF logs what it *would* have blocked, without actually blocking anything, so false positives surface against real traffic before enforcement begins
 2. **Tuning** — specific rules get exceptions (allowlisting a known-safe field, or a known-safe pattern) based on what detection mode revealed
@@ -41,13 +41,13 @@ Skipping straight to blocking mode on day one is a common, avoidable cause of a 
 |---|---|---|
 | **Managed, edge/[CDN](../../networking/cdn.md)-integrated** | [Azure](../../cloud/azure/azure.md) Front Door WAF, Cloudflare WAF, [AWS](../../cloud/infrastructure/aws.md) WAF | No infrastructure to run; rules managed by the provider, updated automatically against emerging attack patterns |
 | **Reverse-proxy module** | ModSecurity on [NGINX](../../backend/api-gateways/nginx.md) | Self-hosted, full control over rules, but the operational burden (patching, rule updates, tuning) is now the team's own |
-| **Dedicated appliance/service** | Azure Firewall (at the network perimeter, broader than just L7 HTTP inspection) | Centralized, organization-wide egress control — see [NSG vs. Azure Firewall](../../cloud/azure/azure-nsg.md#nsg-vs-azure-firewall) for where this overlaps and differs from a WAF specifically |
+| **Dedicated appliance/service** | [Azure](../../cloud/azure/azure.md) Firewall (at the network perimeter, broader than just L7 [HTTP](../../networking/http.md) inspection) | Centralized, organization-wide egress control — see [NSG vs. Azure Firewall](../../cloud/azure/azure-nsg.md#nsg-vs-azure-firewall) for where this overlaps and differs from a WAF specifically |
 
 A cloud-edge WAF (Front Door, Cloudflare) is the common default for a public-facing web application precisely because it needs no infrastructure and inherits the provider's continuously-updated ruleset — the same reasoning that makes a managed [API gateway](../../backend/api-gateways/azure-api-management.md) attractive over a self-hosted one for the same category of reason (less to operate, provider-managed updates).
 
 ## Common Questions
 
-**If a WAF blocks known SQL injection patterns, do I still need parameterized queries?**
+**If a WAF blocks known [SQL injection](sql-injection.md) patterns, do I still need parameterized queries?**
 > Yes, unconditionally — the WAF is a backstop against *known* patterns; parameterized queries are what makes the application actually immune to the attack class regardless of whether the payload matches any known signature. Relying on the WAF alone means a single novel-enough payload (or one the WAF has a rule gap for) reaches a genuinely vulnerable code path.
 
 **Where does a WAF sit relative to a load balancer or API gateway?**

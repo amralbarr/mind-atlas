@@ -50,7 +50,7 @@ NDCG is strictly more informative when graded relevance data exists, but that's 
 
 ## Common Questions
 
-**If NDCG is more informative, why does this handbook's [RAG](../rag/rag.md) evaluation lean on Recall@k/MRR instead?**
+**If NDCG is more informative, why does this handbook's [RAG](../rag/rag.md) evaluation lean on Recall@k/[MRR](mrr.md) instead?**
 > Cost of the judgment, not quality of the metric. A graded relevance scale needs a defined rubric and a rater (human or [LLM](../generation/llm.md)-as-judge) applying it consistently across the whole evaluation set, which is more expensive to build and maintain than a binary "did this chunk get cited and used" label. Teams adopt NDCG when they already have graded judgments for another reason (e.g. licensing a search-quality benchmark) or when ranking quality beyond the top few results genuinely matters for the product.
 
 **What happens if two different queries have different numbers of relevant results — can NDCG still compare them fairly?**
@@ -64,5 +64,5 @@ NDCG is strictly more informative when graded relevance data exists, but that's 
 - [Retrieval Metrics](retrieval-metrics.md) — the full metrics family (Recall@k, Precision@k, NDCG) this file's metric belongs to
 - [MRR](mrr.md) — the binary-relevance metric for "how early does the first good result appear," the cheaper alternative when a full relevance grade isn't available
 - [Groundedness and Correctness](groundedness-and-correctness.md) — the generation-side quality dimensions NDCG doesn't measure; NDCG only scores the ranking of retrieved candidates, not whether the final generated answer is accurate
-- [LLM Evaluation](llm-evaluation.md) — where graded relevance judgments, when collected via LLM-as-judge, feed into this formula
+- [LLM Evaluation](llm-evaluation.md) — where graded relevance judgments, when collected via [LLM](../generation/llm.md)-as-judge, feed into this formula
 - [Cross-Encoder Re-Ranking](../retrieval/cross-encoder-reranking.md) — the stage most likely to move NDCG, by reordering candidates according to a finer-grained relevance signal than the first-pass retriever used

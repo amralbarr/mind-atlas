@@ -27,7 +27,7 @@ TF-IDF has two problems that a raw document search with it will run into immedia
 Despite [BM25](bm25.md) being the standard in real search engines now — [Elasticsearch](../../databases/search/elasticsearch.md), [OpenSearch](../../databases/search/opensearch.md), and most other engines moved to [BM25](bm25.md) as their default scorer years ago — TF-IDF hasn't disappeared. It's still common as:
 
 - **A simple baseline** in classical ML text pipelines, via `scikit-learn`'s `TfidfVectorizer` — turning a corpus of documents into a sparse term-weighted feature matrix for tasks like document clustering, classification, or similarity search that don't need a full search-engine stack.
-- **A teaching/interview reference point** — understanding TF-IDF's two weaknesses is the fastest way to actually understand *why* BM25's two extra parameters exist, rather than just memorizing BM25's formula.
+- **A teaching/interview reference point** — understanding TF-IDF's two weaknesses is the fastest way to actually understand *why* [BM25](bm25.md)'s two extra parameters exist, rather than just memorizing [BM25](bm25.md)'s formula.
 
 ## Related
 

@@ -140,5 +140,5 @@ The serialization step before the [LLM](../../ai/generation/llm.md) call constru
 - [JSON vs Dictionary](json.md) — [JSON](json.md) is one serialization format; a dict is the in-memory structure before/after
 - [Pydantic](../python/pydantic.md) — `model_dump()` / `model_validate()` are [Pydantic](../python/pydantic.md)'s serialize/deserialize methods
 - [Zod](../typescript/zod.md) — TypeScript equivalent: `JSON.stringify()` / `JSON.parse()` + `.parse()`
-- [REST](../../backend/api/rest.md) — [HTTP](../../networking/http.md) APIs serialize request/response bodies as JSON
-- [gRPC](../../backend/api/grpc.md) — uses Protobuf binary serialization instead of JSON
+- [REST](../../backend/api/rest.md) — [HTTP](../../networking/http.md) APIs serialize request/response bodies as [JSON](json.md)
+- [gRPC](../../backend/api/grpc.md) — uses Protobuf binary serialization instead of [JSON](json.md)

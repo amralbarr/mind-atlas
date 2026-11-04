@@ -14,7 +14,7 @@ Standard fine-tuning:           LoRA:
                                     W itself never changes
 ```
 
-**Why this is so much cheaper:** a `d × d` update has `d²` trainable parameters. `B·A` has only `2 × d × r`. With `d = 4096` and `r = 8` — realistic numbers for a mid-size LLM — that's roughly `65,000` trainable parameters instead of `16.7 million`, a reduction of over 250×. Training cost, GPU memory for gradients/optimizer state, and the resulting adapter's storage size all shrink by roughly the same factor.
+**Why this is so much cheaper:** a `d × d` update has `d²` trainable parameters. `B·A` has only `2 × d × r`. With `d = 4096` and `r = 8` — realistic numbers for a mid-size [LLM](../generation/llm.md) — that's roughly `65,000` trainable parameters instead of `16.7 million`, a reduction of over 250×. Training cost, GPU memory for gradients/optimizer state, and the resulting adapter's storage size all shrink by roughly the same factor.
 
 ## Where LoRA Gets Applied
 
@@ -56,8 +56,8 @@ See [Fine-tuning — Full fine-tuning vs. LoRA/QLoRA](fine-tuning.md#full-fine-t
 
 ## Related
 
-- [Fine-tuning](fine-tuning.md) — the broader technique LoRA makes parameter-efficient; includes the full fine-tuning vs. LoRA/QLoRA comparison
+- [Fine-tuning](fine-tuning.md) — the broader technique LoRA makes parameter-efficient; includes the full [fine-tuning](fine-tuning.md) vs. LoRA/QLoRA comparison
 - [vLLM](vllm.md) — an inference server capable of serving multiple LoRA adapters concurrently against one shared frozen base model
-- [LLM Evaluation](../evaluation/llm-evaluation.md) — how to measure whether a chosen rank/configuration actually closed the quality gap a fine-tuning effort was meant to close
+- [LLM Evaluation](../evaluation/llm-evaluation.md) — how to measure whether a chosen rank/configuration actually closed the quality gap a [fine-tuning](fine-tuning.md) effort was meant to close
 - [GPU-Aware Scheduling](gpu-scheduling.md) — relevant once serving many adapters means scheduling which base model + adapter combination runs on which GPU
 - [Large Language Models (LLMs)](../generation/llm.md) — the base model whose weights LoRA leaves untouched

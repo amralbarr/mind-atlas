@@ -2,7 +2,7 @@
 
 The exact multi-tenant revenue-aggregation query from
 [the SQL exercise](../../interview/interview-01/08-sql-analytics-ml.md#sql-exercise-calculate-revenue-without-duplicating-orders),
-running against a real seeded SQLite database (`sqlite3`, zero external
+running against a real seeded [SQLite](../../databases/relational/sqlite.md) database (`sqlite3`, zero external
 dependencies) instead of sitting as an inert code block in a markdown file.
 
 Also demonstrates the join-then-aggregate pattern the handbook warns about:
@@ -21,8 +21,8 @@ python3 -m venv .venv
 
 ## Concepts this demonstrates
 
-- [SQL](../../concepts/databases/relational/sql.md)
-- [Multi-Tenancy & Tenant Isolation](../../concepts/backend/architecture/multi-tenancy.md) — the `tenant_id` scoping in `REVENUE_QUERY`
+- [SQL](../../databases/relational/sql.md)
+- [Multi-Tenancy & Tenant Isolation](../../backend/architecture/multi-tenancy.md) — the `tenant_id` scoping in `REVENUE_QUERY`
 
 ## Related
 

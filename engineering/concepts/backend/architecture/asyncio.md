@@ -195,11 +195,11 @@ To improve performance for [I/O](../../programming/fundamentals/io.md)-heavy ope
 
 **Q5) Does async improve CPU performance?**
 
-No — only I/O-bound tasks benefit.
+No — only [I/O](../../programming/fundamentals/io.md)-bound tasks benefit.
 
 ### Senior-Level Summary
 
-> asyncio is a single-threaded concurrency model based on an [event loop](../../programming/javascript/event-loop.md) that enables efficient non-blocking I/O operations by suspending coroutines at await points and resuming them when their tasks are ready.
+> asyncio is a single-threaded concurrency model based on an [event loop](../../programming/javascript/event-loop.md) that enables efficient non-blocking [I/O](../../programming/fundamentals/io.md) operations by suspending coroutines at await points and resuming them when their tasks are ready.
 
 ### Easy Memory Trick
 

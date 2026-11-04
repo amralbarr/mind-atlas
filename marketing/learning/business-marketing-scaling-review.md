@@ -46,7 +46,7 @@ The single most repeated cause of business failure in the conversation: not know
 - [ ] 🆕 [Video Ad Creative Angles vs. Production Quality](../concepts/digital-marketing/video-ad-creative-angles.md) — why the *angle* (testimonial, demo, POV) matters more for conversion than studio polish
 - [ ] 🔗 [Customer Journey](../concepts/fundamentals/customer-journey.md) — the full real funnel: a 3-minute awareness video → view-percentage retargeting → conversion after 29 days, for an aesthetic clinic's first-ever paid procedure
 - [ ] 🆕 [Video-View-Percentage Retargeting](../concepts/digital-marketing/video-view-retargeting.md) — building retargeting audiences from people who watched a specific % of a video, not just anyone who saw it
-- [ ] 🆕 [Creative Testing & Horizontal Scaling](../concepts/digital-marketing/creative-testing-scaling.md) — the segments × angles × variations formula, plus the concrete "one better CTA = 1,000,000 more in revenue" example
+- [ ] 🆕 [Creative Testing & Horizontal Scaling](../concepts/digital-marketing/creative-testing-scaling.md) — the segments × angles × variations formula, plus the concrete "one better [CTA](../concepts/digital-marketing/call-to-action-cta.md) = 1,000,000 more in revenue" example
 
 ## 5. Paid Media Metrics & Testing
 
@@ -77,7 +77,7 @@ The single most repeated cause of business failure in the conversation: not know
 
 - [ ] Section 1 — Before Starting a Business
 - [ ] Section 2 — Pricing & Financial Fundamentals
-- [ ] Section 3 — Positioning, Segmentation & Branding
+- [ ] Section 3 — [Positioning](../concepts/fundamentals/positioning.md), Segmentation & Branding
 - [ ] Section 4 — Content & Channel Strategy
 - [ ] Section 5 — Paid Media Metrics & Testing
 - [ ] Section 6 — Client Relationships & Scaling

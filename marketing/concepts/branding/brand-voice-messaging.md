@@ -23,7 +23,7 @@ This is more actionable for a writing team than adjectives alone, because it rul
 
 A messaging framework typically has layers, from strategic to tactical:
 
-1. **Value proposition** — the core claim (see [Value Proposition](../fundamentals/value-proposition.md))
+1. **[Value proposition](../fundamentals/value-proposition.md)** — the core claim (see [Value Proposition](../fundamentals/value-proposition.md))
 2. **Key messages** — 3-4 supporting pillars (e.g. speed, reliability, price)
 3. **Proof points** — data, testimonials, or features backing each pillar
 4. **Copy** — the actual sentences used in ads, landing pages, and sales material, derived from the layers above

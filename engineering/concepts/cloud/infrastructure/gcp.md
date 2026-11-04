@@ -17,9 +17,9 @@ GCP is Google's cloud platform, generally regarded as strongest for AI/ML worklo
 |---|---|---|
 | **Compute Engine** | [Virtual machines](virtual-machines.md) | [AWS](aws.md) EC2, [Azure](../azure/azure.md) VM |
 | **Cloud Storage** | [Object storage](object-storage.md) | [AWS](aws.md) S3, [Azure Blob Storage](../azure/azure-blob-storage.md) |
-| **Cloud [SQL](../../databases/relational/sql.md) / Spanner** | Managed relational databases (Spanner: globally distributed [SQL](../../databases/relational/sql.md)) | AWS RDS, [Azure](../azure/azure.md) [SQL](../../databases/relational/sql.md) |
-| **BigQuery** | Serverless, massively parallel data warehouse for analytics at scale | No direct AWS/Azure equivalent at the same scale/pricing model |
-| **Cloud Run** | Fully managed serverless containers — deploy a container image directly, scale to zero | AWS Fargate, Azure Container Apps |
+| **Cloud [SQL](../../databases/relational/sql.md) / Spanner** | Managed relational databases (Spanner: globally distributed [SQL](../../databases/relational/sql.md)) | [AWS](aws.md) RDS, [Azure](../azure/azure.md) [SQL](../../databases/relational/sql.md) |
+| **BigQuery** | Serverless, massively parallel data warehouse for analytics at scale | No direct [AWS](aws.md)/[Azure](../azure/azure.md) equivalent at the same scale/pricing model |
+| **Cloud Run** | Fully managed serverless containers — deploy a container image directly, scale to zero | AWS Fargate, [Azure](../azure/azure.md) Container Apps |
 | **Vertex AI** | Managed ML platform — training, hosting, and serving models | AWS SageMaker, Azure AI |
 | **Cloud [Pub/Sub](../../distributed-systems/messaging/publish-subscribe.md)** | Managed messaging — see [Google Cloud Pub/Sub](../../distributed-systems/messaging/google-pubsub.md) |
 | **GKE** | Managed [Kubernetes](../../distributed-systems/kubernetes/ingress.md), generally considered the most mature managed [Kubernetes](../../distributed-systems/kubernetes/ingress.md) offering of the three major clouds | AWS EKS, Azure AKS |

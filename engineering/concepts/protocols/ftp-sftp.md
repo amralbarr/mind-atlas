@@ -24,7 +24,7 @@ This dual-channel design makes FTP hostile to firewalls and NAT, since the data 
 
 ## How SFTP Works
 
-SFTP runs as a subsystem over a single SSH connection (port 22). All communication — [authentication](../security/auth/authentication.md), commands, data — is encrypted and flows through one channel. It supports the same file operations as FTP plus extras like stat, symlinks, and permissions.
+SFTP runs as a subsystem over a single [SSH](ssh.md) connection (port 22). All communication — [authentication](../security/auth/authentication.md), commands, data — is encrypted and flows through one channel. It supports the same file operations as FTP plus extras like stat, symlinks, and permissions.
 
 ## Common Operations (SFTP CLI)
 
@@ -140,7 +140,7 @@ FTPS still has the dual-channel firewall problem. Prefer SFTP unless you're inte
 ## Security Checklist
 
 - Never use plain FTP — always SFTP or FTPS
-- Prefer SSH key [authentication](../security/auth/authentication.md) over passwords for SFTP
+- Prefer [SSH](ssh.md) key [authentication](../security/auth/authentication.md) over passwords for SFTP
 - Validate server host keys in production (`cnopts.hostkeys` should NOT be `None`)
 - Use a dedicated service account with minimal permissions (read-only if possible)
 - Store credentials in `.env`, never hardcoded

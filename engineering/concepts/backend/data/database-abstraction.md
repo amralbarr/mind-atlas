@@ -29,7 +29,7 @@ Each level trades some control and performance transparency for less engine-spec
 
 ## The Repository Pattern — Abstracting the ORM Itself
 
-Even with an [ORM](orm.md) in place, application/business logic can still end up directly importing and calling the [ORM](orm.md) client everywhere (`prisma.user.findMany(...)` scattered across dozens of files) — which means swapping ORMs, or even just restructuring how a query is built, touches every one of those call sites. The **repository pattern** adds one more layer: a domain-specific class (`UserRepository`) that wraps all database access for one entity behind methods named for what the business logic actually needs, not what the ORM's API happens to look like:
+Even with an [ORM](orm.md) in place, application/business logic can still end up directly importing and calling the [ORM](orm.md) client everywhere (`prisma.user.findMany(...)` scattered across dozens of files) — which means swapping ORMs, or even just restructuring how a query is built, touches every one of those call sites. The **repository pattern** adds one more layer: a domain-specific class (`UserRepository`) that wraps all database access for one entity behind methods named for what the business logic actually needs, not what the [ORM](orm.md)'s API happens to look like:
 
 ```typescript
 // Without a repository: business logic depends directly on Prisma's API shape
@@ -39,7 +39,7 @@ const activeUsers = await prisma.user.findMany({ where: { active: true } });
 const activeUsers = await userRepository.findActiveUsers();
 ```
 
-If the underlying query changes, or the ORM itself is swapped, only `UserRepository`'s internals change — every caller stays exactly the same. This is the [Dependency Inversion Principle](../../programming/fundamentals/dependency-inversion-principle.md) applied directly to the data layer: business logic depends on a `UserRepository` *[abstraction](../../programming/fundamentals/abstraction.md)*, never on the concrete ORM.
+If the underlying query changes, or the [ORM](orm.md) itself is swapped, only `UserRepository`'s internals change — every caller stays exactly the same. This is the [Dependency Inversion Principle](../../programming/fundamentals/dependency-inversion-principle.md) applied directly to the data layer: business logic depends on a `UserRepository` *[abstraction](../../programming/fundamentals/abstraction.md)*, never on the concrete ORM.
 
 ## How Much Abstraction Is Too Much?
 
@@ -56,4 +56,4 @@ Database abstraction is a real engineering trade-off, not a free win:
 - [Abstraction](../../programming/fundamentals/abstraction.md) — the general CS principle this specializes
 - [The N+1 Query Problem](n-plus-1-problem.md) — a cost of over-abstracting: a clean-looking repository call can still generate an inefficient query
 - [Dependency Injection](../../programming/fundamentals/dependency-injection.md) — how a repository interface gets swapped for a fake implementation in tests
-- [Connection Pooling](../../databases/relational/connection-pooling.md) — a concern that lives below the abstraction layer, not above it
+- [Connection Pooling](../../databases/relational/connection-pooling.md) — a concern that lives below the [abstraction](../../programming/fundamentals/abstraction.md) layer, not above it

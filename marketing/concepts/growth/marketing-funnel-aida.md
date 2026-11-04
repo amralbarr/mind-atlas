@@ -16,7 +16,7 @@ The **funnel** is the standard way to visualize how a large pool of prospects na
    Purchase       (narrowest — actual customers)
 ```
 
-Each stage loses some percentage of people (drop-off) — the funnel is "leaky" by design, and CRO/marketing work is largely about improving the conversion rate *between* specific stages, not the whole funnel at once. See [Customer Journey](../fundamentals/customer-journey.md) for the same idea framed around the customer's experience rather than the business's stages.
+Each stage loses some percentage of people (drop-off) — the funnel is "leaky" by design, and [CRO](../analytics/conversion-rate-optimization.md)/marketing work is largely about improving the conversion rate *between* specific stages, not the whole funnel at once. See [Customer Journey](../fundamentals/customer-journey.md) for the same idea framed around the customer's experience rather than the business's stages.
 
 ## AIDA (for a single piece of content or an ad)
 
@@ -25,7 +25,7 @@ Each stage loses some percentage of people (drop-off) — the funnel is "leaky" 
 | **Attention** | Interrupt the scroll/stop the eye | A bold headline or striking visual |
 | **Interest** | Make it relevant to them | Naming their specific problem |
 | **Desire** | Make them want the outcome | Showing the benefit, social proof |
-| **Action** | Tell them exactly what to do next | A clear, single CTA |
+| **Action** | Tell them exactly what to do next | A clear, single [CTA](../digital-marketing/call-to-action-cta.md) |
 
 AIDA works at the scale of one ad or landing page; the funnel works at the scale of the whole customer base over time. Many teams use both — AIDA to write a specific asset, the funnel to see where that asset sits in the bigger picture.
 

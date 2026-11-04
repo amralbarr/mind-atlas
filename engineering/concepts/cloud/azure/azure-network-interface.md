@@ -173,9 +173,9 @@ NSGs can be attached at two levels:
 | Level | Scope | Evaluation order |
 |---|---|---|
 | **Subnet [NSG](azure-nsg.md)** | All NICs in the subnet | Evaluated first (inbound) / last (outbound) |
-| **NIC [NSG](azure-nsg.md)** | Only this NIC | Evaluated after subnet NSG (inbound) / before (outbound) |
+| **NIC [NSG](azure-nsg.md)** | Only this NIC | Evaluated after subnet [NSG](azure-nsg.md) (inbound) / before (outbound) |
 
-For **inbound**: Subnet NSG → NIC NSG (both must allow for traffic to reach the VM).  
+For **inbound**: Subnet [NSG](azure-nsg.md) → NIC NSG (both must allow for traffic to reach the VM).  
 For **outbound**: NIC NSG → Subnet NSG (both must allow for traffic to leave).
 
 ## Related Concepts

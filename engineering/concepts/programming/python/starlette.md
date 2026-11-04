@@ -111,10 +111,10 @@ Any Starlette `Route`, `Mount`, or [middleware](../../backend/middleware.md) wor
 
 - Building a custom framework on top of [ASGI](../../backend/architecture/asgi.md) primitives
 - Writing [ASGI](../../backend/architecture/asgi.md) [middleware](../../backend/middleware.md) that needs to be framework-agnostic
-- A very thin proxy or gateway where FastAPI's overhead is unwanted
+- A very thin proxy or gateway where [FastAPI](fastapi.md)'s overhead is unwanted
 - Teaching or learning how [ASGI](../../backend/architecture/asgi.md) works at the protocol level
 
-For anything that will grow into a real API service, start with FastAPI — it gives you everything Starlette provides plus validation, docs, and [DI](../fundamentals/dependency-injection.md) for free.
+For anything that will grow into a real API service, start with [FastAPI](fastapi.md) — it gives you everything Starlette provides plus validation, docs, and [DI](../fundamentals/dependency-injection.md) for free.
 
 ## Related
 

@@ -51,7 +51,7 @@ A trace view like this is what turns "this request was slow" into "this request 
 > Not exactly legacy, but generally less actively differentiated — many teams now default to [Jaeger](jaeger.md) for new setups given its more active development and richer feature set, while Zipkin remains common in systems that adopted it early and haven't had a reason to migrate. Functionally, for the core "record and view traces" use case, they're close to interchangeable.
 
 **Do Zipkin and [Jaeger](jaeger.md) require separate instrumentation in application code?**
-> Not with [OpenTelemetry](opentelemetry.md) — code is instrumented once against [OpenTelemetry](opentelemetry.md)'s vendor-neutral API, and the exporter configuration (pointing at Zipkin vs. Jaeger vs. a commercial backend) is a deployment-level decision, not an application-code rewrite.
+> Not with [OpenTelemetry](opentelemetry.md) — code is instrumented once against [OpenTelemetry](opentelemetry.md)'s vendor-neutral API, and the exporter configuration (pointing at Zipkin vs. [Jaeger](jaeger.md) vs. a commercial backend) is a deployment-level decision, not an application-code rewrite.
 
 ## Related
 

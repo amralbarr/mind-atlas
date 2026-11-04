@@ -148,7 +148,7 @@ Complete everything in your scope before Day 1.
 - [ ] [Azure](../../concepts/cloud/azure/azure.md) CLI installed — `az --version` works
 - [ ] [Azure](../../concepts/cloud/azure/azure.md) account logged in — `az login` and `az account list` works
 - [ ] VS Code HashiCorp [Terraform](../../concepts/cloud/iac/terraform.md) extension installed
-- [ ] SSH key configured — private key at `~/.ssh/id_ed25519`
+- [ ] [SSH](../../concepts/protocols/ssh.md) key configured — private key at `~/.ssh/id_ed25519`
 - [ ] Minimal [Terraform](../../concepts/cloud/iac/terraform.md) test: `terraform init` runs without error
 
 ## Related

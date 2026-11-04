@@ -57,7 +57,7 @@ Open [Docker](../../concepts/containers/docker.md) Desktop → Settings:
 | **Container** | A running instance created from an image |
 | **Volume** | Persistent storage that lives outside the container — survives restarts |
 | **Network** | A virtual network connecting containers to each other |
-| **Registry** | A repository of images — Docker Hub is the default public registry |
+| **Registry** | A repository of images — [Docker](../../concepts/containers/docker.md) Hub is the default public registry |
 
 See [Docker](../../concepts/containers/docker.md) for a fuller explanation of each concept.
 
@@ -130,7 +130,7 @@ Docker Image does NOT contain:
   └── Application configuration → stored in a named volume
 ```
 
-A Docker image is not a backup. Data must be backed up separately from volumes.
+A [Docker](../../concepts/containers/docker.md) image is not a backup. Data must be backed up separately from volumes.
 
 ## Tips
 

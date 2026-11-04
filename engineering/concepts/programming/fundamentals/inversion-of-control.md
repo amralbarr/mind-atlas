@@ -24,7 +24,7 @@ In a traditional library, your application is in charge: it calls `library.doSom
 | **Scope**                                         | Broad — covers object creation, lifecycle, and execution flow generally                                           | Narrow — specifically about how a class gets its dependencies                             |
 | **Examples beyond [DI](dependency-injection.md)** | Template method pattern, event-driven callbacks, a plugin/hook system, a web framework calling your route handler | —                                                                                         |
 
-[DI](dependency-injection.md) answers one specific question IoC raises — "who creates my dependencies?" — but IoC as a principle also covers questions DI doesn't touch, like "who decides when my code runs at all?"
+[DI](dependency-injection.md) answers one specific question IoC raises — "who creates my dependencies?" — but IoC as a principle also covers questions [DI](dependency-injection.md) doesn't touch, like "who decides when my code runs at all?"
 
 ## Other Implementations of IoC, Beyond DI
 
@@ -39,7 +39,7 @@ IoC shows up in forms that have nothing to do with dependency creation:
 
 ## Why "IoC Container" Is the Common Framework Term
 
-[NestJS](../../backend/nestjs/nestjs-overview.md), [Spring Boot](../java/spring-boot.md), and [Angular](../../frontend/angular.md) all describe their DI mechanism as an **"IoC container"** rather than just a "DI container" — a deliberate naming choice reflecting that the container's job is broader than *just* injecting constructor arguments: it also controls object **lifecycle** (when an instance is created, initialized, and destroyed — see [Provider Scope](provider-scope.md)), which is a form of control beyond dependency creation alone.
+[NestJS](../../backend/nestjs/nestjs-overview.md), [Spring Boot](../java/spring-boot.md), and [Angular](../../frontend/angular.md) all describe their [DI](dependency-injection.md) mechanism as an **"IoC container"** rather than just a "DI container" — a deliberate naming choice reflecting that the container's job is broader than *just* injecting constructor arguments: it also controls object **lifecycle** (when an instance is created, initialized, and destroyed — see [Provider Scope](provider-scope.md)), which is a form of control beyond dependency creation alone.
 
 ## Common Questions
 

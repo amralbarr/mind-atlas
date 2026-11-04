@@ -277,9 +277,9 @@ Yes — it has access to `req`, `res`, and `next`.
 **Q: Why not use middleware for [authorization](../security/authorization/authorization.md)?**
 Middleware is intended for generic request preprocessing, while guards are specifically designed for [authorization](../security/authorization/authorization.md) and access control because they are aware of route context and execution metadata.
 
-**Senior-level answer:** Middleware in NestJS is executed before route handlers and is primarily used for request preprocessing such as logging, header manipulation, token parsing, and request transformation. It operates at the framework level and integrates with Express/Fastify middleware pipelines. [Authentication](../security/auth/authentication.md) and authorization should primarily be handled through dedicated auth modules, strategies, and guards, since guards are integrated into NestJS's execution context and routing system.
+**Senior-level answer:** Middleware in NestJS is executed before route handlers and is primarily used for request preprocessing such as logging, header manipulation, token parsing, and request transformation. It operates at the framework level and integrates with Express/Fastify middleware pipelines. [Authentication](../security/auth/authentication.md) and [authorization](../security/authorization/authorization.md) should primarily be handled through dedicated auth modules, strategies, and guards, since guards are integrated into NestJS's execution context and routing system.
 
-> Easy way to remember: **Middleware prepares the request. Guard protects the route. AuthService manages authentication.**
+> Easy way to remember: **Middleware prepares the request. Guard protects the route. AuthService manages [authentication](../security/auth/authentication.md).**
 
 ## Related
 

@@ -3,7 +3,7 @@
 Three real chunking strategies (fixed-size, recursive-character,
 structure-aware) compared on the same sample document — companion to
 [How do you choose chunk size and overlap?](../../interview/interview-01/01-rag.md)
-and [Chunking Strategies & Libraries](../../overviews/ai/chunking-strategies.md).
+and [Chunking Strategies & Libraries](../../../overviews/ai/chunking-strategies.md).
 
 The tests prove the concrete claim the handbook makes: fixed-size chunking
 can bleed text across a section boundary (one chunk ends up containing both
@@ -22,7 +22,7 @@ python3 -m venv .venv
 
 ## Concepts this demonstrates
 
-- [Chunking Strategies & Libraries](../../overviews/ai/chunking-strategies.md)
+- [Chunking Strategies & Libraries](../../../overviews/ai/chunking-strategies.md)
 
 ## Related
 

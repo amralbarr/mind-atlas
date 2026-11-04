@@ -116,19 +116,19 @@ Go back to Step 1 — edit locally → commit → pull on VM → retest.
 | `git pull` | [Azure](../../concepts/cloud/azure/azure.md) VM (via [SSH](../../concepts/protocols/ssh.md)) | Pulls your pushed code |
 | `docker compose up -d` | [Azure](../../concepts/cloud/azure/azure.md) VM | [Docker](../../concepts/containers/docker.md) runs on the VM |
 | `docker compose ps / logs` | [Azure](../../concepts/cloud/azure/azure.md) VM | Monitor containers on VM |
-| `bash scripts/setup.sh` | Azure VM | Installs packages on Ubuntu |
-| `bash scripts/deploy.sh` | Azure VM | Pulls + restarts stack |
+| `bash scripts/setup.sh` | [Azure](../../concepts/cloud/azure/azure.md) VM | Installs packages on Ubuntu |
+| `bash scripts/deploy.sh` | [Azure](../../concepts/cloud/azure/azure.md) VM | Pulls + restarts stack |
 | `bash scripts/health-check.sh` | Azure VM | Checks container status |
 | `bash scripts/backup.sh` | Azure VM | Backs up data on VM |
 | `terraform init / plan / apply` | Local machine or WSL2 | Provisions Azure resources |
 | `az login` | Local machine | Authenticates Azure CLI |
-| `python ai/indexer.py` | Azure VM (inside Docker) | Indexes documents |
+| `python ai/indexer.py` | Azure VM (inside [Docker](../../concepts/containers/docker.md)) | Indexes documents |
 | `source venv/bin/activate` | Local machine (Linux/Mac) | For local Python testing only |
 | `venv\Scripts\activate` | Local machine (Windows) | For local Python testing only |
 
 ## OS-Specific: Activating the Python Virtual Environment (Local Only)
 
-The Python venv is used **locally** to test AI code before pushing. On the Azure VM, Python runs inside the Docker container — no venv needed there.
+The Python venv is used **locally** to test AI code before pushing. On the Azure VM, Python runs inside the [Docker](../../concepts/containers/docker.md) container — no venv needed there.
 
 **Linux / Mac:**
 

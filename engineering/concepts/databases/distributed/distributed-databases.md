@@ -179,5 +179,5 @@ Sharding    = split data
 - [Read Replicas vs. Write Replicas](../relational/read-replicas.md)
 - [Consensus Algorithms (Raft & Paxos)](../../distributed-systems/patterns/consensus-algorithms.md)
 - [Sharding](sharding.md) — the dedicated atomic note on the [sharding](sharding.md) concept this file summarizes in its Core Concepts and Common Questions sections
-- [Partitioning](../relational/partitioning.md) — the single-instance technique this file's "Sharding ([Partitioning](../relational/partitioning.md))" heading conflates with sharding; the two are distinct (same instance vs. separate instances) per that note
+- [Partitioning](../relational/partitioning.md) — the single-instance technique this file's "[Sharding](sharding.md) ([Partitioning](../relational/partitioning.md))" heading conflates with [sharding](sharding.md); the two are distinct (same instance vs. separate instances) per that note
 - [Database Scaling Strategies](../../../overviews/databases/database-scaling-strategies.md) — ties sharding together with [connection pooling](../relational/connection-pooling.md), [read replicas](../relational/read-replicas.md), and [partitioning](../relational/partitioning.md) as one ordered scaling progression

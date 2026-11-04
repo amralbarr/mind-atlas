@@ -14,7 +14,7 @@
 
 **[Singleton](../design-patterns/singleton.md) is the default in every mainstream [DI](dependency-injection.md) framework** — not because it's always correct, but because most services genuinely *should* be shared: a database connection pool, an [HTTP](../../networking/http.md) client, a cache client. Creating a fresh instance of these per-request (or per-injection) would be wasteful and could exhaust the exact resources (connections, memory) the service is managing.
 
-The failure mode runs the other way, though: if a Singleton-scoped service accidentally holds **per-request mutable state** (storing the current user on an instance field, say), that state leaks across every concurrent request sharing that one instance — a real, hard-to-reproduce bug that only shows up under real concurrent load, not in a single-request test.
+The failure mode runs the other way, though: if a [Singleton](../design-patterns/singleton.md)-scoped service accidentally holds **per-request mutable state** (storing the current user on an instance field, say), that state leaks across every concurrent request sharing that one instance — a real, hard-to-reproduce bug that only shows up under real concurrent load, not in a single-request test.
 
 ```typescript
 // WRONG: a Singleton service storing per-request state on an instance field
@@ -36,7 +36,7 @@ export class RequestContextService {
 
 ## The Same Concept, Different Names, Across Frameworks
 
-The three-tier idea is identical across every major DI framework — only the names and the exact default differ:
+The three-tier idea is identical across every major [DI](dependency-injection.md) framework — only the names and the exact default differ:
 
 | Scope meaning | [NestJS](../../backend/nestjs/nestjs-overview.md) | [Spring Boot](../java/spring-boot.md) | [ASP.NET Core](../csharp/asp-net.md) |
 |---|---|---|---|
@@ -48,7 +48,7 @@ The naming mismatch between NestJS's `REQUEST` and ASP.NET's `Scoped` describing
 
 ## The Real Cost of Request/Transient Scope
 
-Singleton isn't just the default for convenience — it's also the cheapest option, since the instance is created exactly once. Request and Transient scope both mean the DI container has to construct a new instance (and resolve all of *its* dependencies) more often — Request scope once per request, Transient scope on every single injection point. In a hot path handling thousands of requests per second, defaulting everything to Request/Transient scope "just to be safe" has a real, measurable performance cost — scope should be a deliberate choice driven by whether state actually needs isolating, not a reflexive default.
+[Singleton](../design-patterns/singleton.md) isn't just the default for convenience — it's also the cheapest option, since the instance is created exactly once. Request and Transient scope both mean the [DI](dependency-injection.md) container has to construct a new instance (and resolve all of *its* dependencies) more often — Request scope once per request, Transient scope on every single injection point. In a hot path handling thousands of requests per second, defaulting everything to Request/Transient scope "just to be safe" has a real, measurable performance cost — scope should be a deliberate choice driven by whether state actually needs isolating, not a reflexive default.
 
 ## Common Questions
 

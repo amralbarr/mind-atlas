@@ -199,7 +199,7 @@ async def refresh(refresh_token: str | None = Cookie(default=None)):
 - [ASGI](../../backend/architecture/asgi.md)
 - [Dependency Injection](../fundamentals/dependency-injection.md)
 - [asyncio](../../backend/architecture/asyncio.md)
-- [Pydantic](pydantic.md) — FastAPI is built on [Pydantic](pydantic.md); every request/response body is a Pydantic model
+- [Pydantic](pydantic.md) — FastAPI is built on [Pydantic](pydantic.md); every request/response body is a [Pydantic](pydantic.md) model
 - [Structured Output](../../ai/generation/structured-output.md)
 - [JWT](../../security/auth/jwt.md)
 - [Access Token + Refresh Token Pattern](../../security/auth/access-refresh-tokens.md)

@@ -67,11 +67,11 @@ az network bastion ssh \
   --ssh-key ~/.ssh/id_rsa
 ```
 
-Or connect entirely from the Portal: VM → Connect → Bastion → sign in with Entra ID → session opens in-browser, no SSH client needed.
+Or connect entirely from the Portal: VM → Connect → Bastion → sign in with Entra ID → session opens in-browser, no [SSH](../../protocols/ssh.md) client needed.
 
 ## Bastion vs Just-in-Time access vs VPN Gateway
 
-All three solve "how do I reach a VM without permanently exposing SSH/RDP to the internet," with different tradeoffs — see the [Azure secure remote access overview](../../../overviews/cloud/azure-secure-remote-access-options.md) for the full comparison.
+All three solve "how do I reach a VM without permanently exposing [SSH](../../protocols/ssh.md)/RDP to the internet," with different tradeoffs — see the [Azure secure remote access overview](../../../overviews/cloud/azure-secure-remote-access-options.md) for the full comparison.
 
 ## Related Concepts
 

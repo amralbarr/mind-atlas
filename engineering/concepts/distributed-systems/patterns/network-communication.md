@@ -207,14 +207,14 @@ Analytics / events                → Kafka
 
 | Technology | Style |
 |---|---|
-| HTTP | Synchronous |
+| [HTTP](../../networking/http.md) | Synchronous |
 | [JSON](../../programming/fundamentals/json.md)-RPC | Synchronous (or fire-and-forget via notifications) |
 | [gRPC](../../backend/api/grpc.md) | Synchronous |
 | [WebSockets](../../networking/websockets.md) | Real-time, persistent |
 | [Kafka](../messaging/kafka.md) | Asynchronous |
 | [RabbitMQ](../messaging/rabbitmq.md) | Asynchronous |
 
-Note this is sync/async at the level of two *services* talking over a network — does the caller wait for the callee's response before continuing, or does it fire a message and move on. That's a distinct, narrower idea from [asynchronous / non-blocking execution](../../programming/fundamentals/asynchronous-non-blocking-execution.md) within a single process's own [I/O](../../programming/fundamentals/io.md) model (whether its own thread blocks while waiting on an operation) — a service can make a synchronous, wait-for-the-response HTTP call while still being implemented with fully non-blocking [I/O](../../programming/fundamentals/io.md) internally.
+Note this is sync/async at the level of two *services* talking over a network — does the caller wait for the callee's response before continuing, or does it fire a message and move on. That's a distinct, narrower idea from [asynchronous / non-blocking execution](../../programming/fundamentals/asynchronous-non-blocking-execution.md) within a single process's own [I/O](../../programming/fundamentals/io.md) model (whether its own thread blocks while waiting on an operation) — a service can make a synchronous, wait-for-the-response [HTTP](../../networking/http.md) call while still being implemented with fully non-blocking [I/O](../../programming/fundamentals/io.md) internally.
 
 ## Common Questions
 
@@ -228,7 +228,7 @@ When the server needs to push real-time updates continuously, rather than waitin
 
 **Why is [gRPC](../../backend/api/grpc.md) faster than [REST](../../backend/api/rest.md)?**
 
-Because it uses HTTP/2 and binary protobuf [serialization](../../programming/fundamentals/serialization.md) instead of JSON text payloads.
+Because it uses HTTP/2 and binary protobuf [serialization](../../programming/fundamentals/serialization.md) instead of [JSON](../../programming/fundamentals/json.md) text payloads.
 
 **Senior-level summary:**
 

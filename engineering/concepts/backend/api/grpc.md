@@ -72,7 +72,7 @@ A different axis of comparison — [REST](rest.md) and gRPC are both "call a def
 
 ## Why gRPC Doesn't Replace REST at the Edge
 
-Because browsers can't easily speak gRPC directly (no native binary-HTTP/2-trailer support in `fetch`), and because gRPC's binary payloads aren't debuggable with a browser's network tab or a plain `curl`, most systems keep a [REST](rest.md) (or [GraphQL](graphql.md)) layer facing the public internet/browser and use gRPC specifically for the internal, backend-to-backend hops where both ends are trusted, generated code:
+Because browsers can't easily speak gRPC directly (no native binary-[HTTP](../../networking/http.md)/2-trailer support in `fetch`), and because gRPC's binary payloads aren't debuggable with a browser's network tab or a plain `curl`, most systems keep a [REST](rest.md) (or [GraphQL](graphql.md)) layer facing the public internet/browser and use gRPC specifically for the internal, backend-to-backend hops where both ends are trusted, generated code:
 
 ```text
 Browser → REST/GraphQL API → gRPC → Internal Service A → gRPC → Internal Service B
@@ -81,12 +81,12 @@ Browser → REST/GraphQL API → gRPC → Internal Service A → gRPC → Intern
 ## Common Questions
 
 **Why is gRPC described as feeling like "calling a local function"?**
-> Because the generated client stub exposes the remote method as an ordinary function/method call in your language (`client.GetUser(id)`) — the network call, [serialization](../../programming/fundamentals/serialization.md), and deserialization are all hidden behind that generated code, unlike [REST](rest.md) where you typically construct a URL and parse a [JSON](../../programming/fundamentals/json.md) body by hand (or via an HTTP client library).
+> Because the generated client stub exposes the remote method as an ordinary function/method call in your language (`client.GetUser(id)`) — the network call, [serialization](../../programming/fundamentals/serialization.md), and deserialization are all hidden behind that generated code, unlike [REST](rest.md) where you typically construct a URL and parse a [JSON](../../programming/fundamentals/json.md) body by hand (or via an [HTTP](../../networking/http.md) client library).
 
 **Can gRPC be called directly from a browser?**
 > Not the raw protocol — browsers lack the low-level HTTP/2 control gRPC needs. **gRPC-Web** is a JavaScript-compatible variant that requires a proxy (e.g. Envoy) to translate between gRPC-Web and true gRPC on the backend.
 
-**Is gRPC always faster than REST in practice?**
+**Is gRPC always faster than [REST](rest.md) in practice?**
 > For high-volume, low-latency internal calls, generally yes, due to binary [serialization](../../programming/fundamentals/serialization.md) and HTTP/2 multiplexing. For low-volume or debugging-heavy scenarios, the performance gain often isn't worth the loss of human-readability and the added tooling/build-step complexity of maintaining `.proto` schemas and codegen.
 
 ## Related

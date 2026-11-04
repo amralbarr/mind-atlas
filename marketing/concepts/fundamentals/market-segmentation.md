@@ -30,7 +30,7 @@ Segmentation is step one of a three-step process:
 **What makes a segment "viable"?**
 > It should be measurable (you can size it), substantial (large enough to be worth targeting), accessible (you can reach it through some channel), and differentiable (it responds differently to marketing than other segments).
 
-**How does segmentation relate to buyer personas?**
+**How does segmentation relate to [buyer personas](buyer-personas.md)?**
 > A segment is a data-driven group; a [buyer persona](buyer-personas.md) is a semi-fictional, humanized representation of a typical member of that segment, used to make marketing decisions more concrete.
 
 ## Related

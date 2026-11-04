@@ -23,7 +23,7 @@ Trustworthiness borrows credibility from status; similarity borrows credibility 
 
 ## Matching the Creator to the Segment
 
-The single biggest mistake in creator selection isn't picking someone unpopular — it's picking someone who doesn't match the target audience or the product's positioning. A creator who visibly signals a *premium* lifestyle promoting a *budget* product (or vice versa) breaks source credibility even with a large following: the audience buying the budget product doesn't see themselves in a luxury lifestyle, and the mismatch reads as inauthentic. Selecting creators — like selecting guests for a podcast, or casting a persona for an ad — should be filtered on "does this face/voice look like our actual buyer," not follower count alone.
+The single biggest mistake in creator selection isn't picking someone unpopular — it's picking someone who doesn't match the target audience or the product's [positioning](../fundamentals/positioning.md). A creator who visibly signals a *premium* lifestyle promoting a *budget* product (or vice versa) breaks source credibility even with a large following: the audience buying the budget product doesn't see themselves in a luxury lifestyle, and the mismatch reads as inauthentic. Selecting creators — like selecting guests for a podcast, or casting a persona for an ad — should be filtered on "does this face/voice look like our actual buyer," not follower count alone.
 
 ## Why This Matters for Content Volume
 

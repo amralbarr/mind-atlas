@@ -19,7 +19,7 @@ Lucene is the open-source Java library that actually does full-text search — n
 
 ## Can you use Lucene directly?
 
-Yes — the same embedded-library-vs-full-server positioning as [FAISS](../../ai/retrieval/vector-stores/faiss.md) relative to a full [vector database](../../ai/retrieval/vector-database.md). Lucene runs inside your own JVM process with no separate server, [REST](../../backend/api/rest.md) API, or clustering — which is exactly the trade-off: no network hop and no infrastructure to operate, but no distribution across machines and no [HTTP](../../networking/http.md) interface either, unlike Elasticsearch/[OpenSearch](opensearch.md)/Solr. It's the right choice for a single-process Java application that needs embedded search and doesn't need a multi-node cluster — the same niche [FAISS](../../ai/retrieval/vector-stores/faiss.md) or embedded [ChromaDB](../../ai/retrieval/vector-stores/chromadb.md) occupy for vector search specifically.
+Yes — the same embedded-library-vs-full-server [positioning](../../../../marketing/concepts/fundamentals/positioning.md) as [FAISS](../../ai/retrieval/vector-stores/faiss.md) relative to a full [vector database](../../ai/retrieval/vector-database.md). Lucene runs inside your own JVM process with no separate server, [REST](../../backend/api/rest.md) API, or clustering — which is exactly the trade-off: no network hop and no infrastructure to operate, but no distribution across machines and no [HTTP](../../networking/http.md) interface either, unlike [Elasticsearch](elasticsearch.md)/[OpenSearch](opensearch.md)/Solr. It's the right choice for a single-process Java application that needs embedded search and doesn't need a multi-node cluster — the same niche [FAISS](../../ai/retrieval/vector-stores/faiss.md) or embedded [ChromaDB](../../ai/retrieval/vector-stores/chromadb.md) occupy for vector search specifically.
 
 ## Related
 
@@ -28,4 +28,4 @@ Yes — the same embedded-library-vs-full-server positioning as [FAISS](../../ai
 - [Inverted Index](../../ai/retrieval/inverted-index.md) — the structure Lucene's segments implement
 - [Text Analysis Pipeline](../../ai/retrieval/text-analysis.md) — tokenization/normalization/[stemming](../../ai/retrieval/analyzer-pipeline/stemming.md), all implemented as Lucene Analyzer components
 - [Approximate Nearest Neighbor Search (ANN) & HNSW](../../ai/retrieval/approximate-nearest-neighbor.md) — Lucene's own native [HNSW](../../ai/retrieval/hnsw.md) vector support since version 9.x
-- [FAISS](../../ai/retrieval/vector-stores/faiss.md) — the equivalent embedded-library positioning on the vector-search side
+- [FAISS](../../ai/retrieval/vector-stores/faiss.md) — the equivalent embedded-library [positioning](../../../../marketing/concepts/fundamentals/positioning.md) on the vector-search side

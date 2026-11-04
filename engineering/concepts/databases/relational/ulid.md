@@ -67,8 +67,8 @@ Both share the same goal — combining a timestamp with randomness for sortable 
 
 | ULID                | [UUID](uuid.md) v7                    |
 | ---------------------- | ---------------------------- |
-| Custom format               | Official UUID standard             |
-| Base32, readable                | Standard UUID format                    |
+| Custom format               | Official [UUID](uuid.md) standard             |
+| Base32, readable                | Standard [UUID](uuid.md) format                    |
 | Sortable                              | Sortable                                      |
 
 ### Why Some Teams Prefer ULID

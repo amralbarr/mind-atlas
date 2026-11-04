@@ -30,5 +30,5 @@ Blob Storage alone is already reachable over [HTTPS](../../networking/https.md) 
 
 ## Related
 
-- [Azure Blob Storage](azure-blob-storage.md) — the most common origin a CDN sits in front of
-- [ADLS](adls.md) — can also serve as a CDN origin, though it's less commonly fronted by a CDN than plain Blob Storage, since [ADLS](adls.md) workloads are typically analytical rather than public-content-serving
+- [Azure Blob Storage](azure-blob-storage.md) — the most common origin a [CDN](../../networking/cdn.md) sits in front of
+- [ADLS](adls.md) — can also serve as a [CDN](../../networking/cdn.md) origin, though it's less commonly fronted by a CDN than plain Blob Storage, since [ADLS](adls.md) workloads are typically analytical rather than public-content-serving

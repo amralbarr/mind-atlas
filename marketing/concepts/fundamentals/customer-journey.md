@@ -34,7 +34,7 @@ A documented example: launching an entirely new, unproven service with no paid-s
 **Is the customer journey linear?**
 > Rarely in practice — people loop back (re-research after a decision, churn and return), skip stages (a strong referral can skip straight to decision), or run journeys in parallel across devices. The stages are a model for organizing marketing effort, not a guarantee of real user behavior.
 
-**How does this relate to conversion rate optimization?**
+**How does this relate to [conversion rate optimization](../analytics/conversion-rate-optimization.md)?**
 > [CRO](../analytics/conversion-rate-optimization.md) is the practice of improving the conversion rate *at* a specific journey stage — usually decision → purchase — by removing friction or doubt at that step.
 
 ## Related

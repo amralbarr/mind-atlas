@@ -37,7 +37,7 @@ Both are the identical underlying mechanism — a BERT-style (or similar) model 
 **Is `sentence-transformers`' `CrossEncoder` class the only way to run one?**
 > It's the standard open-source entry point, but any model that takes a concatenated pair as input and produces one output — including a plain fine-tuned BERT/RoBERTa/DeBERTa classification head — is architecturally a cross-encoder, whether or not it's loaded through that specific library class.
 
-**Can a cross-encoder be used for retrieval directly, skipping the bi-encoder stage entirely?**
+**Can a cross-encoder be used for retrieval directly, skipping the [bi-encoder](bi-encoder.md) stage entirely?**
 > Only at a scale small enough to score every candidate — a few dozen to low hundreds of documents, depending on latency budget. Past that, a [bi-encoder](bi-encoder.md) first pass is required to narrow the field down to something a cross-encoder can afford to fully score.
 
 ## Related
@@ -47,4 +47,4 @@ Both are the identical underlying mechanism — a BERT-style (or similar) model 
 - [Cross-Encoder Re-Ranking](cross-encoder-reranking.md) — the retrieval application: scoring query-document relevance on a narrowed candidate set
 - [NLI Model](../evaluation/nli-model.md) — the entailment-classification application: scoring premise-hypothesis logical relationship
 - [Claim Verification](../evaluation/claim-verification.md) — where both applications combine in one pipeline
-- [Vector Database](vector-database.md) — the bi-encoder-built index a cross-encoder's input candidate set is drawn from
+- [Vector Database](vector-database.md) — the [bi-encoder](bi-encoder.md)-built index a cross-encoder's input candidate set is drawn from

@@ -219,7 +219,7 @@ More [abstraction](../../programming/fundamentals/abstraction.md) as you move up
 
 Yes — very commonly, for analytics, optimization, complex reporting, and performance-critical queries.
 
-**Modern reality:** most production systems use ORM for the bulk of CRUD operations, and raw SQL for advanced cases.
+**Modern reality:** most production systems use ORM for the bulk of CRUD operations, and raw [SQL](../../databases/relational/sql.md) for advanced cases.
 
 ## ORM and Migrations
 
@@ -241,7 +241,7 @@ await prisma.$transaction([
 
 **Q1) What is ORM?**
 
-> ORM is a layer that maps relational database tables to application objects, allowing developers to interact with databases using programming language constructs instead of raw SQL.
+> ORM is a layer that maps relational database tables to application objects, allowing developers to interact with databases using programming language constructs instead of raw [SQL](../../databases/relational/sql.md).
 
 **Q2) ORM advantages?**
 

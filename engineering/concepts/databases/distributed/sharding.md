@@ -82,7 +82,7 @@ Databases designed from the ground up for horizontal scale ([MongoDB](../nosql/m
 - [Connection Pooling](../relational/connection-pooling.md) — the first, cheapest rung on the same scaling ladder sharding sits at the top of
 - [Distributed Databases](distributed-databases.md) — the general multi-node theory (CAP theorem, consistency models) that sharded systems are built on
 - [MongoDB](../nosql/mongodb.md) — a document database with sharding as a first-class, largely automatic built-in feature
-- [Cassandra](../nosql/cassandra.md) — a wide-column database where partitioning data across peer nodes (effectively sharding) is the core design, not an add-on
+- [Cassandra](../nosql/cassandra.md) — a wide-column database where [partitioning](../relational/partitioning.md) data across peer nodes (effectively sharding) is the core design, not an add-on
 - [Saga Pattern](../../distributed-systems/patterns/saga-pattern.md) — the common pattern for handling a transaction that spans multiple shards without a native cross-shard transaction
 - [Distributed Transactions](distributed-transactions.md) — the deeper treatment of why coordinating a write across more than one shard/node is hard
 - [Horizontal Scaling](../../backend/architecture/horizontal-scaling.md) — the equivalent "add more instances" idea at the stateless application layer, which sharding mirrors at the (much harder, stateful) data layer

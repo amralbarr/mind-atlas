@@ -8,7 +8,7 @@ A generic new business fighting for attention in a saturated market has to prove
 
 ## Personal Brand as a Pricing Lever
 
-Two nearly identical products (e.g. two similarly-made pieces of furniture) can sell at wildly different prices when one is backed by a recognizable brand and the other isn't — the branded version's premium is not (necessarily) a quality difference, it's the buyer's confidence that the brand is worth the price, built through content, positioning, and visible social proof over time. This means personal branding investment can directly justify [value-based pricing](../fundamentals/pricing-strategies.md) that a commodity seller of the same underlying product cannot access.
+Two nearly identical products (e.g. two similarly-made pieces of furniture) can sell at wildly different prices when one is backed by a recognizable brand and the other isn't — the branded version's premium is not (necessarily) a quality difference, it's the buyer's confidence that the brand is worth the price, built through content, [positioning](../fundamentals/positioning.md), and visible social proof over time. This means personal branding investment can directly justify [value-based pricing](../fundamentals/pricing-strategies.md) that a commodity seller of the same underlying product cannot access.
 
 ## Personal Brand Reduces Client Objections
 

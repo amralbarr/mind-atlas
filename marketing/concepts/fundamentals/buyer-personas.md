@@ -6,7 +6,7 @@ A **buyer persona** is a semi-fictional profile of an ideal customer, built from
 
 | Field | Purpose |
 |---|---|
-| Name & role | Makes the persona feel like a real person, not an abstraction |
+| Name & role | Makes the persona feel like a real person, not an [abstraction](../../../engineering/concepts/programming/fundamentals/abstraction.md) |
 | Demographics | Age, income, location, job title |
 | Goals | What they're trying to achieve |
 | Pain points | What's blocking them today |

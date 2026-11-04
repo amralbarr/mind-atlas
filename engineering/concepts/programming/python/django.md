@@ -116,13 +116,13 @@ Django async views require an [ASGI](../../backend/architecture/asgi.md) server 
 
 | | Django + DRF | [FastAPI](fastapi.md) |
 |---|---|---|
-| [ORM](../../backend/data/orm.md) | Built-in Django ORM | Bring your own (SQLAlchemy, Tortoise) |
+| [ORM](../../backend/data/orm.md) | Built-in Django [ORM](../../backend/data/orm.md) | Bring your own (SQLAlchemy, Tortoise) |
 | Admin panel | Built-in `/admin` | None |
 | Auth | Built-in session auth + django-allauth | Bring your own ([JWT](../../security/auth/jwt.md), OAuth) |
 | Migrations | Built-in `makemigrations` | Alembic (SQLAlchemy) or Prisma |
 | Validation | DRF Serializers (explicit class per endpoint) | [Pydantic](pydantic.md) (automatic from type hints) |
 | [OpenAPI](../../backend/api/openapi.md) docs | drf-spectacular or manually configured | Auto-generated at `/docs` |
-| Async | Partial (async views; ORM mostly sync) | Native [ASGI](../../backend/architecture/asgi.md) |
+| Async | Partial (async views; [ORM](../../backend/data/orm.md) mostly sync) | Native [ASGI](../../backend/architecture/asgi.md) |
 
 ## When to Use Django
 

@@ -47,4 +47,4 @@ For enterprise [RAG](../../ai/rag/rag.md): as with [ADLS](../azure/adls.md) and 
 - [Google Cloud Platform (GCP)](gcp.md) — the provider GCS belongs to
 - [Amazon S3 API](../../protocols/s3-api.md) — the closest cross-cloud equivalent; GCS's API is deliberately S3-interoperable enough that some S3 clients work against it with an endpoint change
 - [ADLS](../azure/adls.md) — the [Azure](../azure/azure.md) equivalent, with a genuinely hierarchical namespace GCS and S3 both lack natively
-- [Azure Blob Storage](../azure/azure-blob-storage.md) — the more direct flat-object-storage analog to GCS (ADLS Gen2 is Blob Storage plus a hierarchical namespace layered on top)
+- [Azure Blob Storage](../azure/azure-blob-storage.md) — the more direct flat-object-storage analog to GCS ([ADLS](../azure/adls.md) Gen2 is Blob Storage plus a hierarchical namespace layered on top)

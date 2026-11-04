@@ -10,7 +10,7 @@
 
 ## How it relates to Azure RBAC
 
-Entra ID and Azure [RBAC](../../security/authorization/rbac.md) are two different layers that are often confused because they're both "access control":
+Entra ID and [Azure](azure.md) [RBAC](../../security/authorization/rbac.md) are two different layers that are often confused because they're both "access control":
 
 | | Microsoft Entra ID | [Azure RBAC](azure-rbac.md) |
 |---|---|---|
@@ -18,7 +18,7 @@ Entra ID and Azure [RBAC](../../security/authorization/rbac.md) are two differen
 | Manages | Users, groups, service principals, sign-in policies | Role assignments (principal + role + scope) |
 | Example | "Bob authenticates with his organizational account + MFA" | "Bob's group has `Contributor` on `nextcloud-rg`" |
 
-In short: **Entra ID answers "who are you," Azure [RBAC](../../security/authorization/rbac.md) answers "what can you do."** See [Azure RBAC](azure-rbac.md) for the [authorization](../../security/authorization/authorization.md) side.
+In short: **Entra ID answers "who are you," [Azure](azure.md) [RBAC](../../security/authorization/rbac.md) answers "what can you do."** See [Azure RBAC](azure-rbac.md) for the [authorization](../../security/authorization/authorization.md) side.
 
 ## Groups as the standard access-management pattern
 

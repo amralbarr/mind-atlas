@@ -198,7 +198,7 @@ Both provide the same core guarantee: **data is either valid and typed, or rejec
 
 - [Data Validation](../fundamentals/data-validation.md) — the general concept Zod implements for TypeScript
 - [Pydantic](../python/pydantic.md) — the Python equivalent; same purpose, different syntax
-- [Structured Output](../../ai/generation/structured-output.md) — LLM-side schema enforcement that Zod validates on the application side
+- [Structured Output](../../ai/generation/structured-output.md) — [LLM](../../ai/generation/llm.md)-side schema enforcement that Zod validates on the application side
 - [Tool Calling](../../ai/agents/tool-calling.md) — tool argument schemas can be generated from Zod schemas and passed to [LLMs](../../ai/generation/llm.md)
 - [class-validator](../../backend/api/class-validator.md) — the NestJS decorator-based alternative; Zod is preferred outside NestJS
 - [Validation Libraries Overview](../../../overviews/programming/validation-libraries.md) — [Pydantic](../python/pydantic.md) vs [class-validator](../../backend/api/class-validator.md) vs Zod: when to choose each

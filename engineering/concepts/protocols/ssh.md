@@ -46,7 +46,7 @@ SSH isn't only an interactive shell — several other protocols and tools tunnel
 
 - **Bastion hosts** — a single hardened, monitored entry point that all SSH access to a private network must go through, rather than exposing every server's SSH port directly to the internet; see [Azure Bastion](../cloud/remote-access/azure-bastion.md) for a managed cloud implementation of this pattern.
 - **Restrict by IP/network** — SSH access should be limited to specific trusted IP ranges or a VPN, not open to `0.0.0.0/0`.
-- **Disable password [authentication](../security/auth/authentication.md)** — key-only authentication removes an entire class of [brute-force attacks](../security/attacks/brute-force.md); see [Brute-Force Attacks](../security/attacks/brute-force.md) and [fail2ban](../security/attacks/fail2ban.md) for what still has to be defended against when password auth can't be fully disabled.
+- **Disable password [authentication](../security/auth/authentication.md)** — key-only [authentication](../security/auth/authentication.md) removes an entire class of [brute-force attacks](../security/attacks/brute-force.md); see [Brute-Force Attacks](../security/attacks/brute-force.md) and [fail2ban](../security/attacks/fail2ban.md) for what still has to be defended against when password auth can't be fully disabled.
 - **Disable root login** — authenticate as a normal user and `sudo` for privileged actions, so every action is attributable to a specific key/user, not an anonymous shared "root."
 
 ## Related
@@ -54,7 +54,7 @@ SSH isn't only an interactive shell — several other protocols and tools tunnel
 - [TCP](../networking/tcp.md) — the transport protocol SSH runs over
 - [FTP / SFTP](ftp-sftp.md) — SFTP is a subsystem of SSH, not FTP-over-SSH
 - [Azure Bastion](../cloud/remote-access/azure-bastion.md) — a managed bastion-host implementation gating SSH access
-- [Brute-Force Attacks](../security/attacks/brute-force.md) — the attack class key-only authentication defends against
+- [Brute-Force Attacks](../security/attacks/brute-force.md) — the attack class key-only [authentication](../security/auth/authentication.md) defends against
 - [fail2ban](../security/attacks/fail2ban.md) — rate-limiting repeated failed SSH login attempts
 - [Access Control & IAM](../security/authorization/access-control-iam.md)
 - [Authentication](../security/auth/authentication.md) — SSH key-based auth as a concrete instance of the general concept

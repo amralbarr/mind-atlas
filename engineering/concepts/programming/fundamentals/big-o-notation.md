@@ -104,7 +104,7 @@ Time and space complexity are often in tension — a common technique (memoizati
 
 Big O reasoning shows up constantly in real production decisions, not just algorithm-puzzle interviews:
 
-- **[Database indexing](../../databases/relational/indexing.md)** — the entire value proposition of an index is turning an `O(n)` full table scan into an `O(log n)` B-tree lookup.
+- **[Database indexing](../../databases/relational/indexing.md)** — the entire [value proposition](../../../../marketing/concepts/fundamentals/value-proposition.md) of an index is turning an `O(n)` full table scan into an `O(log n)` B-tree lookup.
 - **The [N+1 query problem](../../backend/data/n-plus-1-problem.md)** — `1 + N` queries is `O(n)` round-trips where a single joined query would be `O(1)` round-trips, regardless of how fast any individual query runs.
 - **Choosing a data structure** — a hash map gives `O(1)` average-case lookup versus an array's `O(n)` linear scan; this single choice alone can be the difference between a feature that scales and one that silently degrades as data grows.
 - **API [pagination](../../backend/api/pagination.md)** — offset-based [pagination](../../backend/api/pagination.md) degrades because `OFFSET` itself does `O(offset)` work to skip rows, which is exactly why cursor-based [pagination](../../backend/api/pagination.md) (`O(log n)` via an index seek) scales better at depth.

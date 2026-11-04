@@ -13,7 +13,7 @@ CRO matters because improving conversion rate compounds with every traffic sourc
 | Category | Examples |
 |---|---|
 | **Friction** (too hard) | Long forms, forced account creation, slow page load, confusing navigation, too many steps to checkout |
-| **Doubt** (not convinced) | Unclear value proposition, no social proof, hidden pricing, no trust signals (security badges, guarantees, reviews) |
+| **Doubt** (not convinced) | Unclear [value proposition](../fundamentals/value-proposition.md), no social proof, hidden pricing, no trust signals (security badges, guarantees, reviews) |
 
 Diagnosing which one is the actual problem at a given step (usually visible in analytics as a specific drop-off point) determines the fix — adding more trust signals won't help if the real issue is a broken form.
 
@@ -26,8 +26,8 @@ Diagnosing which one is the actual problem at a given step (usually visible in a
 
 ## Common Levers
 
-- **Headline / value proposition clarity** — often the single highest-leverage change on a landing page.
-- **Call-to-action (CTA)** — wording, placement, visual prominence, and reducing the number of competing CTAs on a page.
+- **Headline / [value proposition](../fundamentals/value-proposition.md) clarity** — often the single highest-leverage change on a landing page.
+- **Call-to-action ([CTA](../digital-marketing/call-to-action-cta.md))** — wording, placement, visual prominence, and reducing the number of competing CTAs on a page.
 - **Social proof** — testimonials, logos, review counts, case studies.
 - **Form length** — every additional field tends to reduce completion rate; ask only for what's truly needed at that step.
 - **Page speed** — slow load time increases abandonment, especially on mobile.

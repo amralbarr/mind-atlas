@@ -20,10 +20,10 @@ AWS is the largest cloud provider by market share — a vast catalog of on-deman
 | **S3** | [Object storage](object-storage.md) | [Azure Blob Storage](../azure/azure-blob-storage.md), [GCP](gcp.md) Cloud Storage — see [S3 API](../../protocols/s3-api.md) |
 | **RDS** | Managed relational databases (Postgres, [MySQL](../../databases/relational/mysql.md), etc.) | [Azure](../azure/azure.md) [SQL](../../databases/relational/sql.md), [GCP](gcp.md) Cloud [SQL](../../databases/relational/sql.md) |
 | **DynamoDB** | Managed NoSQL key-value/document database | [Azure](../azure/azure.md) Cosmos DB, [GCP](gcp.md) Firestore |
-| **Lambda** | Serverless functions, billed per invocation | [Azure Functions](../azure/azure-functions.md), GCP Cloud Functions |
+| **Lambda** | Serverless functions, billed per invocation | [Azure Functions](../azure/azure-functions.md), [GCP](gcp.md) Cloud Functions |
 | **[SQS](../../distributed-systems/messaging/sqs.md) / SNS** | Managed message queue / pub-sub | See [SQS](../../distributed-systems/messaging/sqs.md) |
 | **EKS** | Managed [Kubernetes](../../distributed-systems/kubernetes/ingress.md) | AKS, GKE |
-| **IAM** | Access control | [Azure](../azure/azure.md) AD/Entra ID, GCP IAM |
+| **IAM** | Access control | [Azure](../azure/azure.md) AD/Entra ID, [GCP](gcp.md) IAM |
 
 ## AWS CLI — Basic Usage
 
@@ -54,7 +54,7 @@ This grants read-only access to objects in one specific bucket — the least-pri
 ## Common Questions
 
 **Why is AWS usually the default recommendation for learning cloud?**
-> Largest install base, the most tutorials/community content, and typically the widest breadth of services to explore under its free tier — not because it's technically superior to Azure or GCP for every workload. See [Cloud Providers](../../../overviews/cloud/cloud-providers.md) for workload-specific recommendations.
+> Largest install base, the most tutorials/community content, and typically the widest breadth of services to explore under its free tier — not because it's technically superior to [Azure](../azure/azure.md) or GCP for every workload. See [Cloud Providers](../../../overviews/cloud/cloud-providers.md) for workload-specific recommendations.
 
 **What's the practical difference between EC2 and Lambda?**
 > EC2 is a persistent virtual machine you manage the OS/runtime of, billed continuously while running. Lambda runs your code only in response to an event/request, with no server to manage and billing per invocation/duration — a fundamentally different cost and operational model, not just "a smaller VM."

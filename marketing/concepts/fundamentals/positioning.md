@@ -10,7 +10,7 @@ The deliberate act of designing how a product is perceived in the mind of a targ
 | **Positioning** | The strategic space you claim relative to competitors, in the customer's mind |
 | [Branding](../branding/brand-identity.md) | The identity, personality, and feel that reinforces the position over time |
 
-A value proposition is usually the written articulation of a positioning strategy; branding is what makes that position memorable and trusted.
+A [value proposition](value-proposition.md) is usually the written articulation of a positioning strategy; branding is what makes that position memorable and trusted.
 
 ## Common Positioning Strategies
 
@@ -33,7 +33,7 @@ A simple way to visualize competitive positioning: plot competitors on two axes 
 **Can positioning change over time?**
 > Yes — repositioning happens when a market shifts, when data shows the current position isn't resonating, or when a company enters a new segment. It's expensive to change once established, since it requires shifting an existing perception.
 
-**What's the difference between market segmentation and positioning?**
+**What's the difference between [market segmentation](market-segmentation.md) and positioning?**
 > [Segmentation](market-segmentation.md) decides *who* to target; positioning decides *how* the product should be perceived by that chosen audience relative to alternatives.
 
 ## Related

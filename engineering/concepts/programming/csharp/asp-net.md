@@ -95,7 +95,7 @@ var activeUsers = await dbContext.Users
 | | ASP.NET Core | [Spring Boot](../java/spring-boot.md) | [NestJS](../../backend/nestjs/nestjs-overview.md) |
 |---|---|---|---|
 | Language | C# | Java / Kotlin | TypeScript |
-| DI | Built into the framework | Spring's [IoC](../fundamentals/inversion-of-control.md) container | Built into the framework |
+| [DI](../fundamentals/dependency-injection.md) | Built into the framework | Spring's [IoC](../fundamentals/inversion-of-control.md) container | Built into the framework |
 | [ORM](../../backend/data/orm.md) | Entity Framework Core | Spring Data JPA (Hibernate) | TypeORM / Prisma (not built-in) |
 | Validation | Data Annotations | Bean Validation | [class-validator](../../backend/api/class-validator.md) |
 | Async model | `async`/`await`, Task-based throughout | Blocking by default; WebFlux for reactive | Promise/`async`-`await`-based, Node.js [event loop](../javascript/event-loop.md) |

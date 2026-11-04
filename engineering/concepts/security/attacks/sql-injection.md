@@ -93,7 +93,7 @@ The safety comes specifically from parameterization, not from "using an [ORM](..
 > No — it's safe for the [ORM](../../backend/data/orm.md)'s own generated queries, but any raw/unsafe [SQL](../../databases/relational/sql.md) escape hatch (common when the [ORM](../../backend/data/orm.md)'s query builder can't express something) reintroduces the exact same risk if that raw [SQL](../../databases/relational/sql.md) is built via string concatenation instead of parameterization.
 
 **Can SQL injection happen through something other than a text input field?**
-> Yes — [HTTP](../../networking/http.md) headers, cookies, URL path segments, and even file names/upload metadata can all end up in a SQL query if the backend isn't careful. Any attacker-influenced value that reaches a query is a potential injection point, not just obvious form fields.
+> Yes — [HTTP](../../networking/http.md) headers, cookies, URL path segments, and even file names/upload metadata can all end up in a [SQL](../../databases/relational/sql.md) query if the backend isn't careful. Any attacker-influenced value that reaches a query is a potential injection point, not just obvious form fields.
 
 **Why can't parameterization fix identifiers like column or table names?**
 > Because parameterized query placeholders (`$1`, `%s`) are only for *values* in the query — the database driver quotes/escapes them as literals. A column or table name is part of the query's *structure*, which placeholders can't substitute into. Dynamic identifiers must be validated against a fixed allow-list of known-safe names instead.

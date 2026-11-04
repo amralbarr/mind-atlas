@@ -272,13 +272,13 @@ They integrate with decorators, metadata, [dependency injection](../../programmi
 Guards determine whether a request is authorized to access a specific route.
 
 **Q: Difference between [middleware](../middleware.md) and guards?**
-Middleware handles generic request processing; guards focus on [authentication](../../security/auth/authentication.md) and [authorization](../../security/authorization/authorization.md) with route awareness.
+[Middleware](../middleware.md) handles generic request processing; guards focus on [authentication](../../security/auth/authentication.md) and [authorization](../../security/authorization/authorization.md) with route awareness.
 
-**Q: Why are guards better than middleware for auth?**
+**Q: Why are guards better than [middleware](../middleware.md) for auth?**
 Because guards can access route metadata, decorators, and the execution context.
 
 **Q: What is `CanActivate`?**
-The interface that defines authorization logic for a guard.
+The interface that defines [authorization](../../security/authorization/authorization.md) logic for a guard.
 
 **Q: What is `ExecutionContext`?**
 An [abstraction](../../programming/fundamentals/abstraction.md) providing access to the request lifecycle and handler metadata.
@@ -289,7 +289,7 @@ An [abstraction](../../programming/fundamentals/abstraction.md) providing access
 **Q: What are common guard use cases?**
 [JWT](../../security/auth/jwt.md) auth, role checks, permission checks, API access control.
 
-**Senior-level answer:** Guards in NestJS are request lifecycle components responsible for authorization and access control decisions. They execute after middleware and before route handlers, leveraging execution context and metadata reflection to enforce [authentication](../../security/auth/authentication.md) and policy-based permissions declaratively. This separates business logic from access-control logic, improving scalability, maintainability, and security architecture.
+**Senior-level answer:** Guards in NestJS are request lifecycle components responsible for [authorization](../../security/authorization/authorization.md) and access control decisions. They execute after middleware and before route handlers, leveraging execution context and metadata reflection to enforce [authentication](../../security/auth/authentication.md) and policy-based permissions declaratively. This separates business logic from access-control logic, improving scalability, maintainability, and security architecture.
 
 > Easy way to remember: **Middleware = general processing. Guard = security checkpoint.**
 

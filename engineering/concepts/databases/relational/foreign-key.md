@@ -166,7 +166,7 @@ Because they enforce valid relationships, prevent inconsistent data, and enable 
 
 **Q3. Difference between [primary key](primary-key.md) and foreign key?**
 
-A primary key is a unique identity for a row; a foreign key is a reference to another table.
+A [primary key](primary-key.md) is a unique identity for a row; a foreign key is a reference to another table.
 
 **Q4. Can a foreign key contain duplicates?**
 
@@ -182,7 +182,7 @@ One parent record associated with many child records.
 
 **Senior-level answer:**
 
-> A foreign key is a relational constraint that references the primary key of another table, ensuring referential integrity and enabling normalized relational data modeling through controlled inter-table relationships.
+> A foreign key is a relational constraint that references the [primary key](primary-key.md) of another table, ensuring referential integrity and enabling normalized relational data modeling through controlled inter-table relationships.
 
 **Easy way to remember:**
 

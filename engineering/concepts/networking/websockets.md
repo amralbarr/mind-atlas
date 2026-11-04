@@ -75,8 +75,8 @@ Every open WebSocket ties up a connection (and typically a slot of server memory
 | | WebSockets | Long/Short Polling | [SSE](../protocols/sse.md) |
 |---|---|---|---|
 | Direction | Bidirectional | Client-initiated, repeated | Server → client only |
-| Connection model | One persistent connection | Repeated [HTTP](http.md) requests | One persistent HTTP connection |
-| Protocol | Separate (`ws://`/`wss://`, requires upgrade) | Plain HTTP | Plain HTTP (`text/event-stream`) |
+| Connection model | One persistent connection | Repeated [HTTP](http.md) requests | One persistent [HTTP](http.md) connection |
+| Protocol | Separate (`ws://`/`wss://`, requires upgrade) | Plain [HTTP](http.md) | Plain HTTP (`text/event-stream`) |
 | Proxy/firewall friendliness | Can be blocked by strict proxies that don't support the upgrade | Always works — it's just HTTP | Always works — it's just HTTP |
 | Best for | Chat, multiplayer games, collaborative editing — anything needing client→server pushes mid-stream | Legacy fallback | One-way streaming ([LLM](../ai/generation/llm.md) token streaming, notifications, live feeds) |
 

@@ -25,7 +25,7 @@ Any time an [LLM](llm.md)'s output needs to be consumed by code rather than read
 
 ## How it actually works: constrained decoding
 
-The mechanism underneath is **constrained decoding**: the provider compiles the target JSON Schema into a grammar — commonly represented as a finite-state automaton — that defines exactly which tokens are valid at each position in the output. During generation, the sampling step (see [Temperature & Sampling Parameters](sampling-parameters.md)) is restricted to only the tokens that keep the output on a valid path through that grammar. This is a structural guarantee enforced at the token-generation level, not a matter of the model "trying harder" to follow instructions — it's mechanically impossible for the model to emit a token that would produce invalid or off-schema output.
+The mechanism underneath is **constrained decoding**: the provider compiles the target [JSON](../../programming/fundamentals/json.md) Schema into a grammar — commonly represented as a finite-state automaton — that defines exactly which tokens are valid at each position in the output. During generation, the sampling step (see [Temperature & Sampling Parameters](sampling-parameters.md)) is restricted to only the tokens that keep the output on a valid path through that grammar. This is a structural guarantee enforced at the token-generation level, not a matter of the model "trying harder" to follow instructions — it's mechanically impossible for the model to emit a token that would produce invalid or off-schema output.
 
 ```
 Schema: { "name": string, "age": integer }
@@ -43,7 +43,7 @@ As of 2026, structured output has become table stakes across major providers, th
 | Provider | Support | Notes |
 |---|---|---|
 | **OpenAI** | Native, strict mode | Constrained decoding, effectively 100% schema validity when strict mode is enabled |
-| **Anthropic** | Native | High schema validity; the exact slice of JSON Schema fully supported is worth checking against current docs for edge cases |
+| **Anthropic** | Native | High schema validity; the exact slice of [JSON](../../programming/fundamentals/json.md) Schema fully supported is worth checking against current docs for edge cases |
 | **Google Gemini** | Native | Constrained decoding, high schema validity |
 
 The practical takeaway: which specific JSON Schema features (nested objects, unions, regex patterns, etc.) each provider fully honors varies, so schema design should stay within the commonly-supported subset (basic object/array/string/number/enum types) for the most portable results across providers.

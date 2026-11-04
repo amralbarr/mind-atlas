@@ -41,7 +41,7 @@ This pattern (sometimes called G-Eval) is now the default approach for teams tha
 
 ## Hybrid evaluation (the practical recommendation)
 
-Because [LLM](../generation/llm.md)-as-judge alone under-catches subtle failures, and human evaluation alone doesn't scale, the standard production pattern combines them: run LLM-as-judge continuously across all or most outputs for fast, cheap signal, and route a sample (commonly around 5–10%) to human review as a calibration layer that catches what the automated judge misses. Studies on this hybrid approach show meaningfully better failure detection than automated-only evaluation.
+Because [LLM](../generation/llm.md)-as-judge alone under-catches subtle failures, and human evaluation alone doesn't scale, the standard production pattern combines them: run [LLM](../generation/llm.md)-as-judge continuously across all or most outputs for fast, cheap signal, and route a sample (commonly around 5–10%) to human review as a calibration layer that catches what the automated judge misses. Studies on this hybrid approach show meaningfully better failure detection than automated-only evaluation.
 
 ## What to actually measure
 

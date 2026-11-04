@@ -27,7 +27,7 @@ Later frameworks extend this for services and modern marketing:
 **Is the 4Ps model still relevant in digital marketing?**
 > Yes, but "Place" now includes digital channels (marketplaces, app stores, direct-to-consumer sites) and "Promotion" includes SEO, paid social, and influencer marketing alongside traditional advertising.
 
-**How does the 4Ps model relate to positioning?**
+**How does the 4Ps model relate to [positioning](positioning.md)?**
 > The 4Ps are the levers; [positioning](positioning.md) is the strategic decision about how those levers combine to occupy a specific place in the customer's mind relative to competitors.
 
 ## Related

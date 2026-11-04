@@ -198,7 +198,7 @@ Response
 - [NestJS Modules](modules-nestjs.md)
 - [class-validator](../api/class-validator.md) — NestJS's decorator-based [DTO](../api/dto.md) validation library, wired via `ValidationPipe`
 - [Dependency Injection](../../programming/fundamentals/dependency-injection.md)
-- [Spring Boot](../../programming/java/spring-boot.md) — the Java framework whose decorator/DI philosophy NestJS mirrors
+- [Spring Boot](../../programming/java/spring-boot.md) — the Java framework whose decorator/[DI](../../programming/fundamentals/dependency-injection.md) philosophy NestJS mirrors
 - [Angular](../../frontend/angular.md) — the frontend framework NestJS's own design was explicitly influenced by
-- [ASP.NET Core](../../programming/csharp/asp-net.md) — the C# equivalent, same DI-first architectural family
+- [ASP.NET Core](../../programming/csharp/asp-net.md) — the C# equivalent, same [DI](../../programming/fundamentals/dependency-injection.md)-first architectural family
 - [BullMQ](../../distributed-systems/messaging/bullmq.md)

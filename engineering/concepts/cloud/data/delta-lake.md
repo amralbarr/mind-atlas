@@ -29,4 +29,4 @@ Each layer in a [medallion architecture](medallion-architecture.md) (Bronze/Silv
 
 - [Medallion Architecture](medallion-architecture.md) — the data-organization pattern Delta Lake tables typically implement
 - [Databricks](databricks.md) — the platform Delta Lake originated from and is most tightly integrated with
-- [ADLS](../azure/adls.md) — the object storage Delta tables are physically stored on
+- [ADLS](../azure/adls.md) — the [object storage](../infrastructure/object-storage.md) Delta tables are physically stored on

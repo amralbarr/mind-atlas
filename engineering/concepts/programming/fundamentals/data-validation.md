@@ -84,7 +84,7 @@ See the [Validation Libraries overview](../../../overviews/programming/validatio
 - [Pydantic](../python/pydantic.md)
 - [class-validator](../../backend/api/class-validator.md)
 - [Zod](../typescript/zod.md)
-- [FastAPI](../python/fastapi.md) — Pydantic is its built-in validation layer
+- [FastAPI](../python/fastapi.md) — [Pydantic](../python/pydantic.md) is its built-in validation layer
 - [Structured Output](../../ai/generation/structured-output.md) — the same validation principle applied to [LLM](../../ai/generation/llm.md) output
 - [JSON](json.md) — the format most validated request bodies arrive as
 - [Idempotency & Double-Submit Prevention](../../backend/api/idempotency.md)

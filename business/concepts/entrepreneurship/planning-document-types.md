@@ -9,7 +9,7 @@ Before converting a skill into a business (see [Skill vs. Business Literacy](ski
 | **Market research** | Who are the customers, competitors, and what does the market actually look like? | Done first, feeds everything else |
 | **Business plan** | Is this venture viable — model, costs, revenue, funding? | Whole-business, often investor-facing |
 | **Strategic plan** | Where is the business going over the next 1-3+ years, and why? | High-level direction and priorities |
-| **Marketing plan** | How will the target audience be reached and converted? | Channels, budget, positioning |
+| **Marketing plan** | How will the target audience be reached and converted? | Channels, budget, [positioning](../../../marketing/concepts/fundamentals/positioning.md) |
 | **Content plan** | What content gets published, where, and on what cadence? | Execution detail under the marketing plan |
 | **Action plan** | Who does what, by when, to execute the above? | Task-level, short time horizon |
 

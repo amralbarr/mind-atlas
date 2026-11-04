@@ -29,8 +29,8 @@ This is the key distinction from **[Azure](azure.md) OpenAI** / the **model cata
 | **[Azure AI Content Safety](../../security/attacks/azure-prompt-shields.md)**        | Detects harmful/unwanted content (hate, violence, self-harm, sexual) in text and images — used to moderate [LLM](../../ai/generation/llm.md) inputs/outputs      |
 | **[Azure](azure.md) AI Translator**            | Text translation across 100+ languages                                                                                             |
 | **[Azure AI Search](azure-ai-search.md)**                | Search-as-a-service with hybrid (keyword + vector) search and semantic ranking — see its own [concept file](azure-ai-search.md)    |
-| **Azure AI Custom Vision**         | Train custom image classification/object detection models on your own labeled images                                               |
-| **Azure AI Content Understanding** | Analyzes and extracts structured insight from multimodal content (documents, audio, video)                                         |
+| **[Azure](azure.md) AI Custom Vision**         | Train custom image classification/object detection models on your own labeled images                                               |
+| **[Azure](azure.md) AI Content Understanding** | Analyzes and extracts structured insight from multimodal content (documents, audio, video)                                         |
 | **Azure AI Immersive Reader**      | Reading-comprehension aids (text-to-speech, translation, grammar breakdown) embeddable in apps                                     |
 
 A few older services (Anomaly Detector, Content Moderator, LUIS, Metrics Advisor, Personalizer, QnA Maker) are retired/retiring and still listed for existing deployments only — not for new builds.
@@ -70,7 +70,7 @@ Billing is usage-based per service: each pricing tier defines a maximum transact
 
 ## Related
 
-- [Azure AI Foundry](azure-ai-foundry.md) — the unified platform that bundles Azure AI services, Azure OpenAI, and the model catalog into one dev/ops experience
+- [Azure AI Foundry](azure-ai-foundry.md) — the unified platform that bundles Azure AI services, [Azure OpenAI](azure-openai.md), and the model catalog into one dev/ops experience
 - [Azure AI Search](azure-ai-search.md) — one of the Azure AI services, with [hybrid search](../../ai/retrieval/hybrid-search.md) and semantic ranking as its specialty
 - [NLP](../../ai/nlp.md) — the field Azure AI Language implements, including the classical-vs-[LLM](../../ai/generation/llm.md)-based task taxonomy
 - [Microsoft Entra ID](microsoft-entra-id.md) — identity provider used for Entra-token [authentication](../../security/auth/authentication.md) to Azure AI services resources

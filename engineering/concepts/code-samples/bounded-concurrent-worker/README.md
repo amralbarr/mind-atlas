@@ -28,9 +28,9 @@ python3 -m venv .venv
 
 ## Concepts this demonstrates
 
-- [Asyncio](../../concepts/backend/architecture/asyncio.md)
-- [Multi-Threading](../../concepts/distributed-systems/patterns/multi-threading.md) — the same bounded-resource reasoning applies to thread pools
-- [Idempotency and Race Conditions](../../concepts/programming/fundamentals/idempotency-and-race-conditions.md)
+- [Asyncio](../../backend/architecture/asyncio.md)
+- [Multi-Threading](../../distributed-systems/patterns/multi-threading.md) — the same bounded-resource reasoning applies to thread pools
+- [Idempotency and Race Conditions](../../programming/fundamentals/idempotency-and-race-conditions.md)
 
 ## Related
 

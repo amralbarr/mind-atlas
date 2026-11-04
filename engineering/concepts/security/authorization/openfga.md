@@ -19,7 +19,7 @@ Examples:
   Can user:carol   delete  tenant:acme-corp?
 ```
 
-OpenFGA answers this question by evaluating a **relationship tuple graph** — a set of stored facts about who has what relationship to what object, combined with an **authorization model** that defines how relationships compose.
+OpenFGA answers this question by evaluating a **relationship tuple graph** — a set of stored facts about who has what relationship to what object, combined with an **[authorization](authorization.md) model** that defines how relationships compose.
 
 ---
 
@@ -260,7 +260,7 @@ If you filter after retrieval — generate an answer from all documents, then ch
 ## Related
 
 - [RBAC](rbac.md) — the simpler baseline: role-only checks with no relationship graph; start here before reaching for OpenFGA
-- [CASL](casl.md) — in-process ability-based authorization for single-service apps; often used alongside OpenFGA for coarse role rules
+- [CASL](casl.md) — in-process ability-based [authorization](authorization.md) for single-service apps; often used alongside OpenFGA for coarse role rules
 - [JWT](../auth/jwt.md) — carries the user identity that OpenFGA checks are performed against
 - [Multi-Tenancy](../../backend/architecture/multi-tenancy.md) — OpenFGA stores are the per-tenant permission isolation mechanism
 - [RAG](../../ai/rag/rag.md) — retrieval must be permission-filtered before documents enter the [context window](../../ai/generation/context-window.md)

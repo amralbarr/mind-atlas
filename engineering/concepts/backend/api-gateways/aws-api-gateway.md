@@ -42,15 +42,15 @@ functions:
           method: post
 ```
 
-Each Lambda function is deployed and wired to its route in one declarative file — this pattern (API Gateway + Lambda, defined as code) is the common shape of an AWS serverless [HTTP](../../networking/http.md) API.
+Each Lambda function is deployed and wired to its route in one declarative file — this pattern (API Gateway + Lambda, defined as code) is the common shape of an [AWS](../../cloud/infrastructure/aws.md) serverless [HTTP](../../networking/http.md) API.
 
 ## Common Questions
 
 **When does AWS API Gateway make sense over [Kong](kong.md)/[NGINX](nginx.md)/[Traefik](traefik.md)?**
-> When the backend is already Lambda-based/serverless and staying fully managed (no gateway infrastructure to operate at all) outweighs the flexibility of a self-hosted gateway's plugin ecosystem. It's a natural fit inside an all-AWS architecture, and a poor fit if the system needs to stay cloud-agnostic or self-hosted.
+> When the backend is already Lambda-based/serverless and staying fully managed (no gateway infrastructure to operate at all) outweighs the flexibility of a self-hosted gateway's plugin ecosystem. It's a natural fit inside an all-[AWS](../../cloud/infrastructure/aws.md) architecture, and a poor fit if the system needs to stay cloud-agnostic or self-hosted.
 
-**[REST](../api/rest.md) API or HTTP API — which should a new project use?**
-> HTTP API for most new use cases — it's cheaper and lower-latency, and covers the common case (routing to Lambda or an HTTP backend, [JWT](../../security/auth/jwt.md)/OAuth authorizers, [CORS](../../security/attacks/cors.md)). [REST](../api/rest.md) API is worth it specifically for older features HTTP API doesn't support, like request/response transformation templates or usage plans with API keys.
+**[REST](../api/rest.md) API or [HTTP](../../networking/http.md) API — which should a new project use?**
+> [HTTP](../../networking/http.md) API for most new use cases — it's cheaper and lower-latency, and covers the common case (routing to Lambda or an HTTP backend, [JWT](../../security/auth/jwt.md)/OAuth authorizers, [CORS](../../security/attacks/cors.md)). [REST](../api/rest.md) API is worth it specifically for older features HTTP API doesn't support, like request/response transformation templates or usage plans with API keys.
 
 ## Related
 

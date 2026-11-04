@@ -31,8 +31,8 @@ A page or ad with multiple competing CTAs ("Sign Up" and "Learn More" and "Conta
 **Is "Click Here" a bad CTA?**
 > Generally yes — it describes the mechanic (clicking) rather than the outcome (what happens after). "Get Your Free Quote" tells the visitor what they get; "Click Here" tells them nothing beyond the fact that it's clickable.
 
-**How does CTA wording interact with A/B testing?**
-> CTA copy is one of the most commonly [A/B tested](../analytics/ab-testing.md) elements precisely because it's a small, isolated change with a directly measurable effect on conversion rate — a good first test for teams new to CRO.
+**How does CTA wording interact with [A/B testing](../analytics/ab-testing.md)?**
+> CTA copy is one of the most commonly [A/B tested](../analytics/ab-testing.md) elements precisely because it's a small, isolated change with a directly measurable effect on conversion rate — a good first test for teams new to [CRO](../analytics/conversion-rate-optimization.md).
 
 ## Related
 

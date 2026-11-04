@@ -6,7 +6,7 @@ Search Engine Optimization: improving a site's visibility in unpaid ("organic") 
 
 | Pillar | What it covers |
 |---|---|
-| **Technical SEO** | Crawlability, site speed, mobile-friendliness, structured data, indexability |
+| **[Technical SEO](../../../engineering/concepts/frontend/technical-seo.md)** | Crawlability, site speed, mobile-friendliness, structured data, indexability |
 | **On-page SEO** | Content quality, keyword targeting, title tags, headers, internal linking |
 | **Off-page SEO** | Backlinks from other sites, brand mentions, domain authority |
 
@@ -18,7 +18,7 @@ Not all keywords deserve the same content, because searchers behind them want di
 
 | Intent | Example query | What should rank |
 |---|---|---|
-| **Informational** | "what is a value proposition" | A blog post/guide |
+| **Informational** | "what is a [value proposition](../fundamentals/value-proposition.md)" | A blog post/guide |
 | **Navigational** | "hubspot login" | The brand's own site |
 | **Commercial investigation** | "best CRM for small business" | A comparison page |
 | **Transactional** | "buy CRM software" | A pricing/signup page |
@@ -38,7 +38,7 @@ Targeting the wrong intent (e.g. a hard sales page for an informational query) t
 > Commonly months, not weeks — it depends on domain authority, competition for the keyword, and content quality. This is why SEO is usually paired with paid channels (see [SEM/PPC](sem-ppc.md)) for faster, more predictable short-term results.
 
 **What's the difference between SEO and SEM?**
-> SEO is unpaid/organic ranking; [SEM](sem-ppc.md) (Search Engine Marketing) typically refers to paid search ads that appear alongside organic results.
+> SEO is unpaid/organic ranking; [SEM](sem-ppc.md) (Search Engine Marketing) typically refers to [paid search](sem-ppc.md) ads that appear alongside organic results.
 
 ## Related
 

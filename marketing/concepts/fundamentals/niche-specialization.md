@@ -31,7 +31,7 @@ A common excuse for not committing to a niche is "that market is already saturat
 **Doesn't narrowing to one niche cap the total revenue opportunity?**
 > Only in the short term. A narrow focus reaches profitability and proof-of-concept faster, which then funds and de-risks expansion into the next niche — versus spreading thin across many niches and reaching meaningful traction in none of them.
 
-**How does this relate to market segmentation?**
+**How does this relate to [market segmentation](market-segmentation.md)?**
 > [Market segmentation](market-segmentation.md) is the analytical step of identifying distinct groups; niche specialization is the strategic decision to deliberately serve only one (or a few) of those groups first, rather than targeting all identified segments simultaneously.
 
 ## Related

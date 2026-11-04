@@ -50,18 +50,25 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent  # .../engineering/
+ROOT = Path(__file__).resolve().parent.parent  # .../mind-atlas/
 
-# Directories whose markdown files are INDEXED as link targets (every file
-# here is assumed to be an atomic concept doc or a comparison overview doc).
-INDEX_DIRS = ["concepts", "overviews"]
+# mind-atlas is multi-domain (engineering/, marketing/, finance/, ...) rather
+# than one flat vault, so index/scan membership is decided by content-type
+# DIRECTORY NAME appearing anywhere in a file's path -- e.g.
+# business/concepts/entrepreneurship/foo.md still counts as a "concepts" file
+# -- rather than a fixed list of paths directly under ROOT.
+EXCLUDE_DIR_NAMES = {"runner-script", ".git"}
 
-# Directories that get SCANNED for bare mentions to replace. Deliberately
-# wider than INDEX_DIRS -- concept files link to each other, and guides /
-# interview / learning prose reference concepts constantly.
-SCAN_DIRS = ["concepts", "overviews", "guides", "interview", "learning", "commands", "installation"]
+# Content-type dir names whose markdown files are INDEXED as link targets
+# (every file here is assumed to be an atomic concept doc or a comparison
+# overview doc).
+INDEX_TYPE_NAMES = {"concepts", "overviews"}
 
-SCAN_EXTRA_FILES = ["README.md"]
+# Content-type dir names that get SCANNED for bare mentions to replace.
+# Deliberately wider than INDEX_TYPE_NAMES -- concept files link to each
+# other, and guides / interview / learning prose reference concepts
+# constantly. A domain's own README.md is always scanned too.
+SCAN_TYPE_NAMES = {"concepts", "overviews", "guides", "interview", "learning", "commands", "installation"}
 
 # Known high-collision generic terms that should never be auto-linked even if
 # a file happens to be titled exactly this -- too likely to appear in
@@ -199,21 +206,32 @@ def extract_aliases(md_path: Path) -> list[str]:
     return cleaned
 
 
+def _path_type_names(p: Path) -> set[str]:
+    """Content-type-relevant directory names in p's path, e.g.
+    business/concepts/entrepreneurship/foo.md -> {"business", "concepts", "entrepreneurship"}."""
+    return set(p.relative_to(ROOT).parts[:-1])
+
+
+def iter_index_files():
+    for p in ROOT.rglob("*.md"):
+        parts = _path_type_names(p)
+        if EXCLUDE_DIR_NAMES & parts:
+            continue
+        if INDEX_TYPE_NAMES & parts:
+            yield p
+
+
 def build_index() -> tuple[dict[str, set[Path]], dict[Path, list[str]]]:
     term_to_files: dict[str, set[Path]] = {}
     file_to_terms: dict[Path, list[str]] = {}
 
-    for d in INDEX_DIRS:
-        base = ROOT / d
-        if not base.exists():
+    for md_path in iter_index_files():
+        aliases = extract_aliases(md_path)
+        if not aliases:
             continue
-        for md_path in base.rglob("*.md"):
-            aliases = extract_aliases(md_path)
-            if not aliases:
-                continue
-            file_to_terms[md_path] = aliases
-            for alias in aliases:
-                term_to_files.setdefault(alias, set()).add(md_path)
+        file_to_terms[md_path] = aliases
+        for alias in aliases:
+            term_to_files.setdefault(alias, set()).add(md_path)
 
     return term_to_files, file_to_terms
 
@@ -336,14 +354,11 @@ def process_file(md_path: Path, terms_sorted: list[str], term_to_files: dict[str
 
 
 def iter_scan_files():
-    for d in SCAN_DIRS:
-        base = ROOT / d
-        if not base.exists():
+    for p in ROOT.rglob("*.md"):
+        parts = _path_type_names(p)
+        if EXCLUDE_DIR_NAMES & parts:
             continue
-        yield from base.rglob("*.md")
-    for f in SCAN_EXTRA_FILES:
-        p = ROOT / f
-        if p.exists():
+        if (SCAN_TYPE_NAMES & parts) or p.name == "README.md":
             yield p
 
 
@@ -369,7 +384,7 @@ def main():
                           "root or the current directory (repeatable). Use right after creating or "
                           "editing a concept/overview file, to link that file's own body against the "
                           "full existing term index, instead of re-scanning the whole vault.")
-    ap.add_argument("--report", default=str(ROOT / "scripts" / "link_sweep_report.md"))
+    ap.add_argument("--report", default=str(ROOT / "runner-script" / "link_sweep_report.md"))
     args = ap.parse_args()
 
     term_to_files, file_to_terms = build_index()

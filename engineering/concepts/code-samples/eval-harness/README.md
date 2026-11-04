@@ -1,6 +1,6 @@
 # Retrieval Eval Harness — Runnable Example
 
-A real `evaluate()` function computing Recall@k, Precision@k, MRR, and
+A real `evaluate()` function computing Recall@k, Precision@k, [MRR](../../ai/evaluation/mrr.md), and
 abstention accuracy against a fixed test set — companion to
 [How would you evaluate a RAG system?](../../interview/interview-01/02-eval.md)
 and [the evaluation metrics workshop](../../interview/interview-01/15-evaluation-metrics-workshop.md).
@@ -21,8 +21,8 @@ python3 -m venv .venv
 
 ## Concepts this demonstrates
 
-- [Retrieval Metrics](../../concepts/ai/evaluation/retrieval-metrics.md) — Recall@k, Precision@k, MRR, abstention accuracy
-- [Fixed Evaluation Dataset](../../concepts/ai/evaluation/fixed-evaluation-dataset.md) — why `EVAL_SET` must stay stable across runs
+- [Retrieval Metrics](../../ai/evaluation/retrieval-metrics.md) — Recall@k, Precision@k, [MRR](../../ai/evaluation/mrr.md), abstention accuracy
+- [Fixed Evaluation Dataset](../../ai/evaluation/fixed-evaluation-dataset.md) — why `EVAL_SET` must stay stable across runs
 
 ## Related
 

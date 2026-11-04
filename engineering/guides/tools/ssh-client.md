@@ -138,7 +138,7 @@ id_ecdsa
 
 - Never share or commit your private key — treat it like a password
 - Use a passphrase on your private key for an extra layer of protection
-- Use the SSH config file to avoid re-typing IPs and usernames
+- Use the [SSH](../../concepts/protocols/ssh.md) config file to avoid re-typing IPs and usernames
 - Disable password [authentication](../../concepts/security/auth/authentication.md) on servers once key-based auth is working
 
 ## Related

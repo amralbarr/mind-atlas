@@ -4,11 +4,11 @@ OpenSearch is a distributed document store and search engine forked from [Elasti
 
 ## Why it exists
 
-In January 2021, Elastic (the company behind [Elasticsearch](elasticsearch.md)) relicensed [Elasticsearch](elasticsearch.md) and Kibana away from Apache 2.0 to a dual Server Side Public License (SSPL) / Elastic License model, citing [cloud providers](../../../overviews/cloud/cloud-providers.md) — specifically [AWS](../../cloud/infrastructure/aws.md) — offering [Elasticsearch](elasticsearch.md) as a managed service without contributing back. [AWS](../../cloud/infrastructure/aws.md) responded by forking the last Apache-2.0 release (7.10.2) into OpenSearch, shipping 1.0 in mid-2021 and keeping it permissively licensed (Apache 2.0) under the Linux Foundation-governed OpenSearch Project. Elastic later (2024) added the AGPLv3 as a third licensing option alongside SSPL and the Elastic License, but Elasticsearch itself remains differently licensed from OpenSearch's unconditional Apache 2.0.
+In January 2021, Elastic (the company behind [Elasticsearch](elasticsearch.md)) relicensed [Elasticsearch](elasticsearch.md) and Kibana away from Apache 2.0 to a dual Server Side Public License (SSPL) / Elastic License model, citing [cloud providers](../../../overviews/cloud/cloud-providers.md) — specifically [AWS](../../cloud/infrastructure/aws.md) — offering [Elasticsearch](elasticsearch.md) as a managed service without contributing back. [AWS](../../cloud/infrastructure/aws.md) responded by forking the last Apache-2.0 release (7.10.2) into OpenSearch, shipping 1.0 in mid-2021 and keeping it permissively licensed (Apache 2.0) under the Linux Foundation-governed OpenSearch Project. Elastic later (2024) added the AGPLv3 as a third licensing option alongside SSPL and the Elastic License, but [Elasticsearch](elasticsearch.md) itself remains differently licensed from OpenSearch's unconditional Apache 2.0.
 
 ## Core Concepts
 
-Identical in name and role to Elasticsearch, inherited directly from the shared 7.10.2 ancestor:
+Identical in name and role to [Elasticsearch](elasticsearch.md), inherited directly from the shared 7.10.2 ancestor:
 
 | Term | Meaning |
 |---|---|
@@ -116,7 +116,7 @@ The `search_pipeline` applies a normalization processor (e.g. min-max or z-score
 | Vector field | Built-in `dense_vector` type, native `knn` search option | Separate k-NN plugin, `knn_vector` type |
 | Vector engine choice | None exposed — Elasticsearch manages [HNSW](../../ai/retrieval/hnsw.md) internally | Explicit `engine` choice: `faiss` (default), `lucene`, or legacy `nmslib` (removed in 3.0) |
 | [Hybrid search](../../ai/retrieval/hybrid-search.md) | `knn` + `query` combined in one request body | Dedicated `hybrid` query type + search pipeline normalization |
-| [AWS](../../cloud/infrastructure/aws.md) managed offering | "Amazon Elasticsearch Service" was rebranded away; [AWS](../../cloud/infrastructure/aws.md) now offers Elasticsearch separately under Elastic's licensing terms | **Amazon OpenSearch Service** — [AWS](../../cloud/infrastructure/aws.md)'s own managed offering, unsurprisingly, given OpenSearch is an AWS-originated fork |
+| [AWS](../../cloud/infrastructure/aws.md) managed offering | "Amazon Elasticsearch Service" was rebranded away; [AWS](../../cloud/infrastructure/aws.md) now offers Elasticsearch separately under Elastic's licensing terms | **Amazon OpenSearch Service** — [AWS](../../cloud/infrastructure/aws.md)'s own managed offering, unsurprisingly, given OpenSearch is an [AWS](../../cloud/infrastructure/aws.md)-originated fork |
 | Common cloud default | Elastic Cloud (Elastic's own managed service) | Amazon OpenSearch Service; also used internally by some other providers' "Elasticsearch-compatible" offerings |
 
 Both remain close enough at the [REST](../../backend/api/rest.md)/query-DSL level that most non-vector workloads port between them with minimal changes — the real decision point in practice is licensing posture and which vector/k-NN API shape a team is already invested in. [Apache Solr](solr.md#comparison-solr-vs-elasticsearch-vs-opensearch) is the third [Lucene](lucene.md)-based option in this space — older than both, Apache-2.0-licensed like OpenSearch, but with the newest and least turnkey vector/[hybrid search](../../ai/retrieval/hybrid-search.md) of the three; see its comparison table for the full three-way breakdown.
@@ -124,10 +124,10 @@ Both remain close enough at the [REST](../../backend/api/rest.md)/query-DSL leve
 ## Related
 
 - [Elasticsearch](elasticsearch.md) — the project OpenSearch forked from, with native `dense_vector`/`knn` instead of a separate plugin
-- [Apache Solr](solr.md) — the older Lucene-based, Apache-2.0-licensed search engine; shares OpenSearch's permissive licensing but with a smaller, newer vector-search feature set
+- [Apache Solr](solr.md) — the older [Lucene](lucene.md)-based, Apache-2.0-licensed search engine; shares OpenSearch's permissive licensing but with a smaller, newer vector-search feature set
 - [Lucene](lucene.md) — the library OpenSearch's `lucene` k-NN engine option and full-text search both build on
 - [BM25](../../ai/retrieval/bm25.md) — the lexical scoring algorithm behind OpenSearch's default text relevance
-- [Text Analysis: Tokenization, Normalization, Stemming & Lemmatization](../../ai/retrieval/text-analysis.md) — the analyzer pipeline, inherited from the shared Lucene lineage
+- [Text Analysis: Tokenization, Normalization, Stemming & Lemmatization](../../ai/retrieval/text-analysis.md) — the analyzer pipeline, inherited from the shared [Lucene](lucene.md) lineage
 - [Inverted Index](../../ai/retrieval/inverted-index.md) — the structure behind OpenSearch's full-text search
 - [Approximate Nearest Neighbor Search (ANN)](../../ai/retrieval/approximate-nearest-neighbor.md) / [HNSW](../../ai/retrieval/hnsw.md) — the algorithm behind the k-NN plugin's `hnsw` method
 - [Hybrid Search](../../ai/retrieval/hybrid-search.md) — the general pattern OpenSearch's `hybrid` query type implements natively

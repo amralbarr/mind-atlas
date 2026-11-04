@@ -87,7 +87,7 @@ Remove-Item AzureCLI.msi
 az --version
 ```
 
-**Login to Azure:**
+**Login to [Azure](../azure/azure.md):**
 ```powershell
 az login
 # Opens browser → sign in with your Azure account
@@ -119,7 +119,7 @@ terraform --version
 
 ## How Terraform Authenticates with Azure
 
-No [API key](../../security/auth/api-key.md) file is required. Terraform uses the Azure CLI login session:
+No [API key](../../security/auth/api-key.md) file is required. Terraform uses the [Azure](../azure/azure.md) CLI login session:
 
 ```
 az login                    ← you login once in the terminal

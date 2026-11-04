@@ -24,7 +24,7 @@ Azure Region
 
 ### Subnet
 
-A subnet is a subdivision of the VNet. Resources ([VMs](../infrastructure/virtual-machines.md)) are placed in subnets. In this project, one subnet is sufficient. Separate subnets would be used in larger projects to isolate different tiers (web, database, etc.).
+A subnet is a subdivision of the [VNet](azure-vnet.md). Resources ([VMs](../infrastructure/virtual-machines.md)) are placed in subnets. In this project, one subnet is sufficient. Separate subnets would be used in larger projects to isolate different tiers (web, database, etc.).
 
 ### Public IP Address
 
@@ -118,13 +118,13 @@ security_rule {
 
 ## How it Fits in This Project
 
-Networking is owned by Member 4 (Computer Engineering / Networking). The VNet, Subnet, [NSG](azure-nsg.md), and [VM](../infrastructure/virtual-machines.md) are all defined in [Terraform](terraform.md). Member 4 also writes the port matrix and validates from an external perspective that no unauthorized ports are reachable. Member 2 (Cybersecurity) reviews the [NSG](azure-nsg.md) rules as part of the security review.
+Networking is owned by Member 4 (Computer Engineering / Networking). The [VNet](azure-vnet.md), Subnet, [NSG](azure-nsg.md), and [VM](../infrastructure/virtual-machines.md) are all defined in [Terraform](terraform.md). Member 4 also writes the port matrix and validates from an external perspective that no unauthorized ports are reachable. Member 2 (Cybersecurity) reviews the [NSG](azure-nsg.md) rules as part of the security review.
 
 ## Related
 
 - [Microsoft Azure](azure.md)
 - [Azure Virtual Network (VNet)](azure-vnet.md) — the general concept this file applies as a concrete single-VM [NSG](azure-nsg.md) rule set
-- [Azure Network Security Group (NSG)](azure-nsg.md) — the full, general NSG reference this file's project-specific rules are one instance of
+- [Azure Network Security Group (NSG)](azure-nsg.md) — the full, general [NSG](azure-nsg.md) reference this file's project-specific rules are one instance of
 - [Terraform](terraform.md)
 - [Virtual Machines](../infrastructure/virtual-machines.md)
 - [Access Control & IAM](../../security/authorization/access-control-iam.md)

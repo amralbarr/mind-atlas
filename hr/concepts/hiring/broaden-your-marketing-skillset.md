@@ -9,7 +9,7 @@ Media buying is one execution skill inside a much larger discipline. A media buy
 ## Skills Worth Deliberately Building
 
 - **Sales fundamentals** — understanding how a deal actually gets closed changes how a marketer designs a funnel and writes a call-to-action.
-- **Broader marketing strategy** — positioning, segmentation, and pricing (not just the paid-acquisition execution layer).
+- **Broader marketing strategy** — [positioning](../../../marketing/concepts/fundamentals/positioning.md), segmentation, and pricing (not just the paid-acquisition execution layer).
 - **Languages** — operating only in one language caps the markets and clients reachable; multilingual capability is repeatedly cited as a differentiator in competitive marketing job markets.
 - **General business literacy** — enough to read a client's numbers and hold a credible strategic conversation, not just execute a brief handed down.
 

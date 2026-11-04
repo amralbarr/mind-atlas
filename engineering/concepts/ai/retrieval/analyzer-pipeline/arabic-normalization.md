@@ -139,7 +139,7 @@ The practical consequence:
 
 ## Spoken interview answer
 
-> "I treat normalization as a measured decision, not a fixed rule list. I start with the safe steps: [NFKC](nfkc.md) normalization, removing diacritics, tatweel, and invisible characters, and unifying alef forms and digits. Riskier steps like alef maqsura unification or stemming I only enable if evaluation actually proves they help. I store the original text for display and citation, the normalized text for indexing, and identifiers in a separate exact-match field with no normalization applied. I apply the exact same function to the query. Then I evaluate MSA, dialects, code-switching, and English queries separately, because the overall average hides real problems."
+> "I treat normalization as a measured decision, not a fixed rule list. I start with the safe steps: [NFKC](nfkc.md) normalization, removing diacritics, tatweel, and invisible characters, and unifying alef forms and digits. Riskier steps like alef maqsura unification or [stemming](stemming.md) I only enable if evaluation actually proves they help. I store the original text for display and citation, the normalized text for indexing, and identifiers in a separate exact-match field with no normalization applied. I apply the exact same function to the query. Then I evaluate MSA, dialects, code-switching, and English queries separately, because the overall average hides real problems."
 
 ## Related
 
@@ -147,7 +147,7 @@ The practical consequence:
 - [NFKC](nfkc.md) — why [NFKC](nfkc.md) specifically is what the `normalize_ar()` code above calls, and why NFC alone wouldn't work
 - [Unicode Normalization Forms (NFC, NFD, NFKC, NFKD)](unicode-normalization.md) — the overview comparing all four forms
 - [Tokenization (IR)](text-tokenization.md)
-- [Stemming](stemming.md) — the general mechanics behind the Arabic stemming risk noted above
+- [Stemming](stemming.md) — the general mechanics behind the Arabic [stemming](stemming.md) risk noted above
 - [OCR](../../ingestion/ocr.md) — the extraction-quality problem that normalization cannot fix
 - [Embedding Model Selection](../../../../overviews/ai/embedding-model-selection.md) — the cross-lingual retrieval gap normalization cannot close
 - [Chunking Strategies & Libraries](../../../../overviews/ai/chunking-strategies.md)

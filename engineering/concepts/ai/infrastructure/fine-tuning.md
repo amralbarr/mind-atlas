@@ -46,7 +46,7 @@ Updating every weight in a modern [LLM](../generation/llm.md) (full fine-tuning)
 | **[LoRA](lora.md)** ([Low-Rank Adaptation](lora.md)) | Freezes the base model's weights entirely and trains small, low-rank "adapter" matrices injected alongside them | Cuts training cost and storage sharply — the adapter is a small fraction of the base model's size, and multiple adapters can be swapped in for different tasks against the same frozen base |
 | **QLoRA** | [LoRA](lora.md) combined with 4-bit quantization of the frozen base model | Enables fine-tuning large models on a single consumer-grade GPU, at a small cost in numerical precision |
 
-As of 2026, LoRA and QLoRA are the default approach for most teams doing fine-tuning — full fine-tuning is reserved for cases that specifically need it (e.g. foundation model providers training their own base models).
+As of 2026, [LoRA](lora.md) and QLoRA are the default approach for most teams doing fine-tuning — full fine-tuning is reserved for cases that specifically need it (e.g. foundation model providers training their own base models).
 
 ## When fine-tuning is the right call
 

@@ -216,7 +216,7 @@ REINDEX TABLE users;
 | --------------------- | ---------------------------------- | ----------------------------------- |
 | Integer / auto-increment | Best index performance               | Hard to generate in distributed systems; predictable |
 | [UUID](uuid.md) v4                    | Great uniqueness/distribution              | Causes fragmentation; slower indexes    |
-| [ULID](ulid.md) / UUID v7                | Distributed, sortable, less fragmentation    | Newer/less universally supported          |
+| [ULID](ulid.md) / [UUID](uuid.md) v7                | Distributed, sortable, less fragmentation    | Newer/less universally supported          |
 
 See [Surrogate Key](surrogate-key.md), [Natural Key](natural-key.md), [UUID](uuid.md), and [ULID](ulid.md) for more on choosing an ID strategy.
 
@@ -226,7 +226,7 @@ See [Surrogate Key](surrogate-key.md), [Natural Key](natural-key.md), [UUID](uui
 
 > Index fragmentation occurs when index pages become disorganized due to random insertions, updates, and page splits, reducing query and insertion efficiency.
 
-**Q2. Why does UUID v4 cause fragmentation?**
+**Q2. Why does [UUID](uuid.md) v4 cause fragmentation?**
 
 Because random values insert into random index positions, causing page splits and scattered storage.
 

@@ -94,7 +94,7 @@ CREATE TABLE users (
 
 ## Candidate Key
 
-A candidate key is any field that could uniquely identify a row — e.g. `email`, `national_id`, `passport_number`. One of them becomes the primary key.
+A candidate key is any field that could uniquely identify a row — e.g. `email`, `national_id`, `passport_number`. One of them becomes the [primary key](primary-key.md).
 
 ## Composite Natural Key
 
@@ -118,7 +118,7 @@ Usually avoided because replication, synchronization, and updates become more co
 **When are natural keys useful?**
 When the value is truly immutable, compact, guaranteed unique, and business-critical.
 
-**Is email a good primary key?**
+**Is email a good [primary key](primary-key.md)?**
 Usually no — emails may change, produce larger indexes, and expose sensitive info. Better: `id` as PRIMARY KEY, `email` as UNIQUE.
 
 ### Common Comparison

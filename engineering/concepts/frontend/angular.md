@@ -66,8 +66,8 @@ Angular's [dependency injection](../programming/fundamentals/dependency-injectio
 | **Language** | TypeScript-first, built in | JavaScript, TypeScript optional | JavaScript, TypeScript optional |
 | **Component style** | Class + decorators | Function + [hooks](hooks.md) | Function + [hooks](hooks.md) |
 | **[Dependency injection](../programming/fundamentals/dependency-injection.md)** | Built-in, first-class | None — Context/external libraries | None — same as React |
-| **Async primitive** | RxJS Observables | Promises, [hooks](hooks.md) | Promises, hooks |
-| **Learning curve** | Steeper (DI, RxJS, decorators, modules) | Gentler | Gentler, plus [rendering-strategy](rendering-strategies.md) concepts |
+| **Async primitive** | RxJS Observables | Promises, [hooks](hooks.md) | Promises, [hooks](hooks.md) |
+| **Learning curve** | Steeper ([DI](../programming/fundamentals/dependency-injection.md), RxJS, decorators, modules) | Gentler | Gentler, plus [rendering-strategy](rendering-strategies.md) concepts |
 | **Common use case** | Large enterprise SPAs, especially alongside a decorator-based backend (NestJS, Spring, .NET) | Any scale, maximum ecosystem flexibility | SEO-sensitive apps needing [SSR/SSG](rendering-strategies.md) |
 
 ## Forms — Template-Driven vs. Reactive
@@ -102,7 +102,7 @@ const routes: Routes = [
 ## Common Questions
 
 **Is Angular still relevant given React's popularity?**
-> Yes, particularly in large enterprise environments — its opinionated, all-in-one structure and first-class TypeScript/DI support appeal to teams already standardized on a similarly structured backend (Java/Spring, .NET, or NestJS), where consistency of architecture across the stack is valued over React's greater flexibility and larger talent pool.
+> Yes, particularly in large enterprise environments — its opinionated, all-in-one structure and first-class TypeScript/[DI](../programming/fundamentals/dependency-injection.md) support appeal to teams already standardized on a similarly structured backend (Java/Spring, .NET, or NestJS), where consistency of architecture across the stack is valued over React's greater flexibility and larger talent pool.
 
 **Why does Angular use RxJS instead of plain Promises?**
 > RxJS Observables support cancellation, retry, and combining/transforming multiple async streams declaratively (e.g. debouncing a search-as-you-type input) — capabilities a Promise, which represents exactly one eventual value, cannot express on its own.
@@ -112,7 +112,7 @@ const routes: Routes = [
 - [Next.js Overview](nextjs-overview.md) — the comparison point for a React-based alternative
 - [Components](components.md) — the equivalent building-block concept in React
 - [Props vs. State](props-vs-state.md) — `@Input()`/`@Output()` are Angular's analog to props
-- [Hooks](hooks.md) — React's state/lifecycle primitive, contrasted with Angular's class-based lifecycle hooks
+- [Hooks](hooks.md) — React's state/lifecycle primitive, contrasted with Angular's class-based lifecycle [hooks](hooks.md)
 - [Dependency Injection](../programming/fundamentals/dependency-injection.md) — Angular's defining architectural feature, shared with NestJS and Spring
 - [NestJS Overview](../backend/nestjs/nestjs-overview.md) — the backend framework whose design was explicitly influenced by Angular
 - [Spring Boot](../programming/java/spring-boot.md) — another decorator/DI-driven framework with the same architectural DNA

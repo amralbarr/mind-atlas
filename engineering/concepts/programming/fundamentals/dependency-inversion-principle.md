@@ -67,7 +67,7 @@ class FakeOrderRepository implements OrderRepository {
 }
 ```
 
-Notice: the second version doesn't require a DI framework at all — manually passing `new OrderService(new PostgresOrderRepository())` already satisfies DIP, because `OrderService` only ever references the `OrderRepository` interface, never the concrete class. A [dependency injection](dependency-injection.md) container (NestJS, Spring, ASP.NET) just automates *which* implementation gets passed in — it doesn't change *whether* DIP is being followed.
+Notice: the second version doesn't require a [DI](dependency-injection.md) framework at all — manually passing `new OrderService(new PostgresOrderRepository())` already satisfies DIP, because `OrderService` only ever references the `OrderRepository` interface, never the concrete class. A [dependency injection](dependency-injection.md) container (NestJS, Spring, ASP.NET) just automates *which* implementation gets passed in — it doesn't change *whether* DIP is being followed.
 
 ## DIP vs. Dependency Injection — The Distinction That Matters
 
@@ -76,7 +76,7 @@ Notice: the second version doesn't require a DI framework at all — manually pa
 | **What it is** | A design *principle* — depend on abstractions, not concretions | A *technique* for supplying a class's dependencies from outside |
 | **Scope** | A rule about the *direction* of dependencies in a design | A mechanism for *wiring* dependencies together at runtime |
 | **Requires a framework?** | No — can be satisfied with plain interfaces and manual construction | No — can be done manually (constructor arguments) or via a framework/container |
-| **Can you have one without the other?** | Yes — satisfy DIP manually, with no DI container at all | Yes — a DI container can still inject a concrete class directly, violating DIP |
+| **Can you have one without the other?** | Yes — satisfy DIP manually, with no [DI](dependency-injection.md) container at all | Yes — a DI container can still inject a concrete class directly, violating DIP |
 
 They're frequently used together (a DI container resolving interface-typed constructor parameters is both DIP-compliant *and* using DI), but neither implies the other.
 
@@ -87,10 +87,10 @@ They're frequently used together (a DI container resolving interface-typed const
 ## Common Questions
 
 **Does "inversion" mean dependencies flow backward?**
-> Not quite — it means the *ownership* of the [abstraction](abstraction.md) inverts. In a naive design, the high-level module depends on the low-level module's own interface (if any). Under DIP, the **high-level module defines the interface it needs**, and the low-level module must conform to it — the abstraction is owned by the high-level/business side, not the low-level/implementation side.
+> Not quite — it means the *ownership* of the [abstraction](abstraction.md) inverts. In a naive design, the high-level module depends on the low-level module's own interface (if any). Under DIP, the **high-level module defines the interface it needs**, and the low-level module must conform to it — the [abstraction](abstraction.md) is owned by the high-level/business side, not the low-level/implementation side.
 
 **Is every interface automatically DIP-compliant?**
-> No — defining `interface PostgresOrderRepository` and having only Postgres-specific methods on it doesn't help; the interface still leaks a low-level concern (which database) into the abstraction. A DIP-compliant interface is defined in terms the high-level module cares about (`save`, `findById`), not in terms of the low-level implementation's own vocabulary.
+> No — defining `interface PostgresOrderRepository` and having only Postgres-specific methods on it doesn't help; the interface still leaks a low-level concern (which database) into the [abstraction](abstraction.md). A DIP-compliant interface is defined in terms the high-level module cares about (`save`, `findById`), not in terms of the low-level implementation's own vocabulary.
 
 ## Related
 

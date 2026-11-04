@@ -26,7 +26,7 @@ Marketing delivered directly to a subscriber's inbox. It remains one of the high
 
 - **Permission matters** — purchased lists have poor deliverability and often violate anti-spam law (e.g. CAN-SPAM, GDPR); opted-in lists convert far better.
 - **Segmentation** — sending the same email to an entire list underperforms sending relevant emails to smaller, well-defined segments (see [Market Segmentation](../fundamentals/market-segmentation.md)).
-- **Deliverability** — depends on sender reputation, authentication (SPF/DKIM/DMARC), and engagement rates; low engagement over time can land future emails in spam even for engaged subscribers.
+- **Deliverability** — depends on sender reputation, [authentication](../../../engineering/concepts/security/auth/authentication.md) (SPF/DKIM/DMARC), and engagement rates; low engagement over time can land future emails in spam even for engaged subscribers.
 
 ## Automation & Drip Sequences
 

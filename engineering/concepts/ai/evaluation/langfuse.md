@@ -42,7 +42,7 @@ langfuse.create_score(trace_id="...", name="correctness", value=0.8)
 
 ## Self-hosted vs. Cloud
 
-Because the core platform is open-source, teams with strict data-residency requirements commonly self-host it ([Docker Compose](../../containers/docker-compose.md) for small deployments, [Kubernetes](../../distributed-systems/kubernetes/ingress.md) for production scale) and pay nothing beyond their own infrastructure; Langfuse Cloud trades that operational burden for a managed, usage-priced SaaS tier. This open-core-first positioning is the main practical reason teams pick Langfuse over [LangSmith](langsmith.md) when self-hosting matters.
+Because the core platform is open-source, teams with strict data-residency requirements commonly self-host it ([Docker Compose](../../containers/docker-compose.md) for small deployments, [Kubernetes](../../distributed-systems/kubernetes/ingress.md) for production scale) and pay nothing beyond their own infrastructure; Langfuse Cloud trades that operational burden for a managed, usage-priced SaaS tier. This open-core-first [positioning](../../../../marketing/concepts/fundamentals/positioning.md) is the main practical reason teams pick Langfuse over [LangSmith](langsmith.md) when self-hosting matters.
 
 ## Where it fits in an LLM/agent workflow
 

@@ -1,6 +1,6 @@
 # Azure VPN Gateway — Point-to-Site (P2S)
 
-**Azure VPN Gateway** is a managed VPN service attached to a [VNet](../azure/azure-vnet.md). In **Point-to-Site (P2S)** mode, an individual client machine establishes a VPN connection from wherever it is (home, office, coffee shop) directly into the [VNet](../azure/azure-vnet.md) — once connected, the client can reach any resource in the VNet by its **private IP**, as if it were on the same local network.
+**Azure VPN Gateway** is a managed VPN service attached to a [VNet](../azure/azure-vnet.md). In **Point-to-Site (P2S)** mode, an individual client machine establishes a VPN connection from wherever it is (home, office, coffee shop) directly into the [VNet](../azure/azure-vnet.md) — once connected, the client can reach any resource in the [VNet](../azure/azure-vnet.md) by its **private IP**, as if it were on the same local network.
 
 ## How it works
 
@@ -14,7 +14,7 @@ Azure VPN Gateway (deployed in the VNet's GatewaySubnet)
 VM / any resource in the VNet — reached via its private IP, e.g. 10.0.1.4
 ```
 
-Point-to-site requires a **route-based** VPN gateway. Once the tunnel is up, the client machine gets an IP from a configured client address pool and can route to the VNet's private CIDR range.
+Point-to-site requires a **route-based** VPN gateway. Once the tunnel is up, the client machine gets an IP from a configured client address pool and can route to the [VNet](../azure/azure-vnet.md)'s private CIDR range.
 
 ## Authentication options
 

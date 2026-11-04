@@ -66,18 +66,18 @@ on-error   ← runs instead of outbound if any prior section throws
 
 | | Azure API Management | [Kong](kong.md) / [NGINX](nginx.md) / [Traefik](traefik.md) | [AWS API Gateway](aws-api-gateway.md) |
 |---|---|---|---|
-| **Hosting** | Fully managed (Azure) | Self-hosted (or [Kong](kong.md) Konnect managed) | Fully managed ([AWS](../../cloud/infrastructure/aws.md)) |
+| **Hosting** | Fully managed ([Azure](../../cloud/azure/azure.md)) | Self-hosted (or [Kong](kong.md) Konnect managed) | Fully managed ([AWS](../../cloud/infrastructure/aws.md)) |
 | **Configuration model** | Declarative XML policies | Plugins (Lua/custom) or config files | Console/API-defined integrations |
-| **Natural fit** | Azure-native backends, [Azure OpenAI](../../cloud/azure/azure-openai.md)/AI Search fronting, Entra ID auth | Cloud-agnostic or self-hosted requirement | Lambda/serverless-first [AWS](../../cloud/infrastructure/aws.md) backends |
+| **Natural fit** | [Azure](../../cloud/azure/azure.md)-native backends, [Azure OpenAI](../../cloud/azure/azure-openai.md)/AI Search fronting, Entra ID auth | Cloud-agnostic or self-hosted requirement | Lambda/serverless-first [AWS](../../cloud/infrastructure/aws.md) backends |
 | **Developer portal** | Built-in, auto-generated from the API's [OpenAPI](../api/openapi.md) spec | Not built-in ([Kong](kong.md) has a separate dev portal product) | Not built-in |
 
-The practical decision mirrors any cloud-vendor-gateway choice: APIM is the natural default inside an Azure-centric architecture — especially one already using [Azure AI Search](../../cloud/azure/azure-ai-search.md), Azure OpenAI, or Entra ID — while a self-hosted gateway remains preferable for a cloud-agnostic or multi-cloud system.
+The practical decision mirrors any cloud-vendor-gateway choice: APIM is the natural default inside an Azure-centric architecture — especially one already using [Azure AI Search](../../cloud/azure/azure-ai-search.md), [Azure OpenAI](../../cloud/azure/azure-openai.md), or Entra ID — while a self-hosted gateway remains preferable for a cloud-agnostic or multi-cloud system.
 
 ## Fronting an Azure OpenAI / RAG Endpoint
 
-A common enterprise AI pattern: put APIM in front of an Azure OpenAI deployment (or any model endpoint) rather than letting every client call it directly —
+A common enterprise AI pattern: put APIM in front of an [Azure OpenAI](../../cloud/azure/azure-openai.md) deployment (or any model endpoint) rather than letting every client call it directly —
 
-- **Per-consumer rate limiting** on token-expensive model calls, via `rate-limit-by-key`, preventing one noisy workload from exhausting a shared quota
+- **Per-consumer [rate limiting](../architecture/rate-limiting.md)** on token-expensive model calls, via `rate-limit-by-key`, preventing one noisy workload from exhausting a shared quota
 - **Subscription-key-based access** so different internal teams/apps each get their own key, usage tracking, and revocable access, without touching the underlying model deployment's own access controls
 - **Response caching** (`cache-lookup`/`cache-store` policies) for repeated identical prompts, cutting cost on cacheable traffic
 - **Centralized Entra ID validation** once at the gateway, instead of every calling service re-implementing token validation
@@ -98,7 +98,7 @@ This is the same "gateway enforces cross-cutting policy, backend stays simple" p
 ## Related
 
 - [Kong](kong.md) / [NGINX](nginx.md) / [Traefik](traefik.md) — the self-hosted alternatives APIM's managed model trades flexibility for
-- [AWS API Gateway](aws-api-gateway.md) — the equivalent managed offering on AWS, for the direct cross-cloud comparison
+- [AWS API Gateway](aws-api-gateway.md) — the equivalent managed offering on [AWS](../../cloud/infrastructure/aws.md), for the direct cross-cloud comparison
 - [Microsoft Entra ID](../../cloud/azure/microsoft-entra-id.md) — the identity provider APIM's `validate-jwt` policy checks tokens against
 - [JWT](../../security/auth/jwt.md) — the token format and validation principles APIM's policy syntax implements declaratively
 - [Rate Limiting](../architecture/rate-limiting.md) — the general pattern APIM's `rate-limit`/`rate-limit-by-key` policies implement

@@ -124,7 +124,7 @@ Several engines in this handbook support hybrid search natively rather than requ
 - [Vector Databases](vector-database.md) — the semantic half of a hybrid search setup
 - [Weaviate](vector-stores/weaviate.md) — a [vector database](vector-database.md) with hybrid search ([BM25](bm25.md) + vector) built in
 - [Azure AI Search](../../cloud/azure/azure-ai-search.md) — managed hybrid search with built-in semantic re-ranking
-- [Elasticsearch](../../databases/search/elasticsearch.md) and [OpenSearch](../../databases/search/opensearch.md) — combine `knn`/`hybrid` query clauses with BM25 natively
+- [Elasticsearch](../../databases/search/elasticsearch.md) and [OpenSearch](../../databases/search/opensearch.md) — combine `knn`/`hybrid` query clauses with [BM25](bm25.md) natively
 - [PostgreSQL](../../databases/relational/postgresql.md) — `pgvector` (vector) + `tsvector` (full-text) can be combined manually for the same effect
 - [Agentic RAG](../rag/agentic-rag.md) — an agent can choose to run a hybrid search tool, or fall back to pure keyword search, based on the query
 - [Embeddings](../ingestion/embeddings.md) — what powers the vector half of hybrid search

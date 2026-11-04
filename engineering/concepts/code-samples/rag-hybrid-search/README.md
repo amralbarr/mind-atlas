@@ -1,12 +1,12 @@
 # RAG Hybrid Search — Runnable Example
 
-A real BM25 + vector + Reciprocal Rank Fusion (RRF) merge, runnable with zero
+A real [BM25](../../ai/retrieval/bm25.md) + vector + [Reciprocal Rank Fusion](../../ai/retrieval/reciprocal-rank-fusion.md) (RRF) merge, runnable with zero
 network calls or API keys — companion to
 [How would you choose an embedding model / handle hybrid search?](../../interview/interview-01/01-rag.md).
 
 The embedding step is a dependency-free stand-in (character-trigram hashing,
 see `fake_embed()` in `hybrid_search.py`) so this runs instantly offline; the
-BM25 index, cosine similarity, and RRF merge logic are the real thing — swap
+[BM25](../../ai/retrieval/bm25.md) index, cosine similarity, and RRF merge logic are the real thing — swap
 `fake_embed()` for a real embedding model call and nothing else changes.
 
 ## Run it
@@ -21,10 +21,10 @@ python3 -m venv .venv
 
 ## Concepts this demonstrates
 
-- [Hybrid Search](../../concepts/ai/retrieval/hybrid-search.md)
-- [BM25](../../concepts/ai/retrieval/bm25.md)
-- [Reciprocal Rank Fusion (RRF)](../../concepts/ai/retrieval/reciprocal-rank-fusion.md)
-- [BM25 vs. Hybrid Search vs. RRF](../../overviews/ai/bm25-vs-hybrid-search-vs-rrf.md)
+- [Hybrid Search](../../ai/retrieval/hybrid-search.md)
+- [BM25](../../ai/retrieval/bm25.md)
+- [Reciprocal Rank Fusion (RRF)](../../ai/retrieval/reciprocal-rank-fusion.md)
+- [BM25 vs. Hybrid Search vs. RRF](../../../overviews/ai/bm25-vs-hybrid-search-vs-rrf.md)
 
 ## Related
 

@@ -60,7 +60,7 @@ app.useGlobalPipes(new ValidationPipe({
 }));
 ```
 
-With these options NestJS: validates every incoming body against the DTO, strips unexpected fields, coerces types, and returns a structured 400 error on failure — all without any per-route code.
+With these options NestJS: validates every incoming body against the [DTO](dto.md), strips unexpected fields, coerces types, and returns a structured 400 error on failure — all without any per-route code.
 
 ---
 
@@ -79,7 +79,7 @@ With these options NestJS: validates every incoming body against the DTO, strips
 | `@IsEnum(MyEnum)` | Must be one of the enum's values |
 | `@Length(min, max)` | String length range |
 | `@Matches(regex)` | Must match a regular expression |
-| `@ValidateNested()` | Validate a nested DTO object recursively (requires `@Type()` from `class-transformer`) |
+| `@ValidateNested()` | Validate a nested [DTO](dto.md) object recursively (requires `@Type()` from `class-transformer`) |
 
 ---
 

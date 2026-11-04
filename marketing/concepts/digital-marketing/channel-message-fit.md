@@ -1,10 +1,10 @@
 # Channel & Call-to-Action Fit
 
-The right channel and call-to-action (CTA) type depend on *who* the audience is — age, B2B vs. B2C, and how tech-comfortable they are — not on which channel is easiest to run from an ad platform.
+The right channel and call-to-action ([CTA](call-to-action-cta.md)) type depend on *who* the audience is — age, B2B vs. B2C, and how tech-comfortable they are — not on which channel is easiest to run from an ad platform.
 
 ## Matching CTA Type to Audience
 
-| Audience | Best CTA / channel | Why |
+| Audience | Best [CTA](call-to-action-cta.md) / channel | Why |
 |---|---|---|
 | Older audience (45+), lower tech comfort | "Call Now" button, phone-based | Filling out a form or messaging feels like friction; a phone call is the path of least resistance |
 | Younger, digitally fluent audience | Lead forms, DMs, website checkout | Comfortable self-serving without a phone call |

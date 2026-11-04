@@ -24,7 +24,7 @@ Azure AI Foundry (formerly **[Azure](azure.md) AI Studio**, renamed 2024) is Mic
 | [vLLM](../../ai/infrastructure/vllm.md) inference server | [Azure OpenAI Service](azure-openai.md) endpoint                           |
 | pgvector ([PostgreSQL](../../databases/relational/postgresql.md))                                    | [Azure AI Search](azure-ai-search.md)                                         |
 | [OpenTelemetry](../../backend/observability/opentelemetry.md) + [Grafana](../../backend/observability/grafana.md)                                  | [Azure](azure.md) Monitor + Application Insights                    |
-| Custom [CI/CD](../../devops/ci-cd.md)                                             | Azure DevOps / [GitHub Actions](../../devops/github-actions.md)                           |
+| Custom [CI/CD](../../devops/ci-cd.md)                                             | [Azure](azure.md) DevOps / [GitHub Actions](../../devops/github-actions.md)                           |
 | [Azure AD](microsoft-entra-id.md) / [JWT](../../security/auth/jwt.md) | [Microsoft Entra ID](microsoft-entra-id.md) (see below) |
 
 ## What Azure AI Foundry Does NOT Do Automatically
@@ -35,7 +35,7 @@ Azure AI Foundry (formerly **[Azure](azure.md) AI Studio**, renamed 2024) is Mic
 
 ## Related
 
-- [Microsoft Entra ID](microsoft-entra-id.md) — the Azure AD identity provider Foundry auth maps to, including the [JWT](../../security/auth/jwt.md) access tokens it issues
+- [Microsoft Entra ID](microsoft-entra-id.md) — the [Azure](azure.md) AD identity provider Foundry auth maps to, including the [JWT](../../security/auth/jwt.md) access tokens it issues
 - [JWT](../../security/auth/jwt.md) — the token format Entra ID issues and a self-hosted gateway would validate instead
 - [Databricks](../data/databricks.md) — upstream data engineering and ML platform that feeds curated data into [Azure AI Search](azure-ai-search.md)
 - [ADLS](adls.md) — the raw storage layer that [Databricks](../data/databricks.md) reads from on Azure

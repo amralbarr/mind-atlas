@@ -249,10 +249,10 @@ resource "azurerm_network_interface_security_group_association" "main" {
 | Level | [NIC](azure-network-interface.md) / Subnet (L3/L4) | [VNet](azure-vnet.md) boundary (L4/L7) |
 | Rules | IP, port, protocol | IP, port, FQDN, URL, [TLS](../../networking/tls.md) inspection |
 | Cost | Free | ~$1/hour + data |
-| Logging | Flow logs to storage | Azure Monitor, Log Analytics |
+| Logging | Flow logs to storage | [Azure](azure.md) Monitor, Log Analytics |
 | Best for | Per-resource traffic control | Central network perimeter control |
 
-Use NSGs for per-resource rules; use Azure Firewall for organization-wide egress control and L7 inspection.
+Use NSGs for per-resource rules; use [Azure](azure.md) Firewall for organization-wide egress control and L7 inspection.
 
 ## Security Best Practices
 

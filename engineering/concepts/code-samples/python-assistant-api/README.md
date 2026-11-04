@@ -53,12 +53,12 @@ the server starts and the dependency-injection wiring is correct, but an actual
 
 ## Concepts this project demonstrates
 
-- [Dependency Injection](../../concepts/programming/fundamentals/dependency-injection.md) — `services/interfaces.py`'s Protocols, swapped for fakes in tests
-- [Connection Pooling](../../concepts/databases/relational/connection-pooling.md) — the shared `httpx.AsyncClient` created once in `main.py`'s lifespan
-- [Authentication](../../concepts/security/auth/authentication.md) / [Authorization](../../concepts/security/authorization/authorization.md) — `auth.py`'s `get_current_user` dependency
-- [Retrieval Metrics](../../concepts/ai/evaluation/retrieval-metrics.md) — the abstention pattern in `pipeline.py`
-- [Hybrid Search](../../concepts/ai/retrieval/hybrid-search.md) — what `services/retriever.py` would call in a real deployment
-- [FastAPI](../../concepts/programming/python/fastapi.md) / [Pydantic](../../concepts/programming/python/pydantic.md)
+- [Dependency Injection](../../programming/fundamentals/dependency-injection.md) — `services/interfaces.py`'s Protocols, swapped for fakes in tests
+- [Connection Pooling](../../databases/relational/connection-pooling.md) — the shared `httpx.AsyncClient` created once in `main.py`'s lifespan
+- [Authentication](../../security/auth/authentication.md) / [Authorization](../../security/authorization/authorization.md) — `auth.py`'s `get_current_user` dependency
+- [Retrieval Metrics](../../ai/evaluation/retrieval-metrics.md) — the abstention pattern in `pipeline.py`
+- [Hybrid Search](../../ai/retrieval/hybrid-search.md) — what `services/retriever.py` would call in a real deployment
+- [FastAPI](../../programming/python/fastapi.md) / [Pydantic](../../programming/python/pydantic.md)
 
 ## Related
 

@@ -66,7 +66,7 @@ A table can have:
 
 | Column   | Type        |
 | -------- | ----------- |
-| id       | PRIMARY KEY |
+| id       | [PRIMARY KEY](primary-key.md) |
 | email    | UNIQUE      |
 | username | UNIQUE      |
 | phone    | UNIQUE      |
@@ -115,7 +115,7 @@ Means "this field also must remain unique," but it is not the main identity.
 
 This distinction is important:
 
-- **PRIMARY KEY** cannot be NULL — `NULL` in an `id` column is impossible.
+- **[PRIMARY KEY](primary-key.md)** cannot be NULL — `NULL` in an `id` column is impossible.
 - **UNIQUE KEY** behavior depends on the database. Some databases (including [PostgreSQL](postgresql.md)) allow multiple NULLs in a UNIQUE column, because `NULL != NULL` in [SQL](sql.md) logic — each NULL is treated as an unknown value, not a duplicate.
 
 ```sql

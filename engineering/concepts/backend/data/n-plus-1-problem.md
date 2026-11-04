@@ -120,7 +120,7 @@ for user in User.objects.prefetch_related("orders"):
     print(len(user.orders.all()))     # from memory, no new query
 ```
 
-| Django tool | When to use it |
+| [Django](../../programming/python/django.md) tool | When to use it |
 |---|---|
 | `select_related` | A **to-one** relationship (e.g. `order.user`): uses a JOIN |
 | `prefetch_related` | A **to-many** relationship (e.g. `user.orders`): uses a second query with `IN` |
@@ -198,7 +198,7 @@ With DataLoader:     orders(user IN [1, 2, 3, ...])                       ← on
 
 ## The Same Pattern Outside Databases
 
-N+1 isn't a SQL-only problem — it's **any network round trip inside a loop**:
+N+1 isn't a [SQL](../../databases/relational/sql.md)-only problem — it's **any network round trip inside a loop**:
 
 ```python
 # ❌ N+1 with an embeddings API: 5,000 network calls
@@ -219,7 +219,7 @@ The exact same shape shows up with: calling a microservice once per item, readin
 | Tool | How |
 |---|---|
 | **SQLAlchemy** | `create_engine(url, echo=True)` prints every query — if you see the same query repeating with different values, that's N+1 |
-| **Django** | The Django Debug Toolbar shows the query count per page |
+| **[Django](../../programming/python/django.md)** | The Django Debug Toolbar shows the query count per page |
 | **Slow query logs** | Database logs for slow or repeated queries |
 | **APM** (Datadog, New Relic, [Azure](../../cloud/azure/azure.md) Application Insights) | Shows the query count per [HTTP](../../networking/http.md) request |
 | **In tests** | Write a test asserting the **query count stays fixed** no matter how many records exist |
@@ -246,7 +246,7 @@ def test_users_page_query_count(self):
 
 ### Advanced Interview Answer
 
-> "The N+1 problem is an anti-pattern where query count explodes because traversing object relationships triggers excessive database round trips. It shows up most often with ORMs, due to lazy loading, and in GraphQL resolvers. I address it with eager loading, batching via `IN`, or DataLoader, and guard against regressions with a test that pins the query count — because this bug doesn't show up in development with small datasets, only at production scale."
+> "The N+1 problem is an anti-pattern where query count explodes because traversing object relationships triggers excessive database round trips. It shows up most often with ORMs, due to lazy loading, and in [GraphQL](../api/graphql.md) resolvers. I address it with eager loading, batching via `IN`, or DataLoader, and guard against regressions with a test that pins the query count — because this bug doesn't show up in development with small datasets, only at production scale."
 
 ## Summary
 
@@ -263,7 +263,7 @@ def test_users_page_query_count(self):
 - [Database Abstraction](database-abstraction.md) — the [abstraction](../../programming/fundamentals/abstraction.md) layer that hides the generated queries in the first place
 - [GraphQL](../api/graphql.md) — resolver-per-field makes N+1 especially easy to trigger
 - [Connection Pooling](../../databases/relational/connection-pooling.md) — reduces the *connection* cost per query, but does nothing for the *query count* itself
-- [Embeddings](../../ai/ingestion/embeddings.md) — a real example of the same batching problem outside SQL entirely
+- [Embeddings](../../ai/ingestion/embeddings.md) — a real example of the same batching problem outside [SQL](../../databases/relational/sql.md) entirely
 - [Kafka](../../distributed-systems/messaging/kafka.md) — another non-SQL instance: flushing once per message instead of batching
 - [System Design](../architecture/system-design.md)
 - [Distributed Databases](../../databases/distributed/distributed-databases.md)

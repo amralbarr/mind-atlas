@@ -1,6 +1,6 @@
 # Brand Identity
 
-The collection of visual, verbal, and experiential elements a company controls to shape how it's perceived — distinct from **brand image** (how it's *actually* perceived, which the company doesn't fully control) and **positioning** (the strategic decision the identity is built to reinforce).
+The collection of visual, verbal, and experiential elements a company controls to shape how it's perceived — distinct from **brand image** (how it's *actually* perceived, which the company doesn't fully control) and **[positioning](../fundamentals/positioning.md)** (the strategic decision the identity is built to reinforce).
 
 ## Core Elements
 
@@ -34,7 +34,7 @@ The accumulated value a brand has earned from consistent, positive experiences �
 > A logo is one visual asset within the identity; the brand is the entire perception built over time — including reputation, product quality, and every customer interaction. Redesigning a logo doesn't change the brand.
 
 **Should a startup invest heavily in brand identity early?**
-> Usually a lean, consistent identity (clear name, simple logo, one clear tone of voice) is enough early on. Heavy brand investment tends to pay off once positioning is validated and repeat exposure at scale actually matters.
+> Usually a lean, consistent identity (clear name, simple logo, one clear tone of voice) is enough early on. Heavy brand investment tends to pay off once [positioning](../fundamentals/positioning.md) is validated and repeat exposure at scale actually matters.
 
 ## Related
 

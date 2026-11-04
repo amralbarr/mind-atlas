@@ -101,7 +101,7 @@ This runs three replicas of the application.
 
 ## K3s: A Lightweight Distribution
 
-**K3s** is a certified, minimal-footprint [Kubernetes](ingress.md) distribution (a single small binary, reduced dependencies) built for resource-constrained or edge environments — a small self-hosted cluster, IoT devices, or simply a team that wants Kubernetes semantics without running the full upstream control-plane stack. It's still real Kubernetes (the same APIs, the same manifests apply), just packaged and configured to be lighter to install and operate; a common path for a smaller platform is to run on [Docker Compose](../../containers/docker-compose.md) initially and adopt K3s as the first step into Kubernetes, before moving to a full managed cluster (EKS/GKE/AKS) if scale later demands it.
+**K3s** is a certified, minimal-footprint [Kubernetes](ingress.md) distribution (a single small binary, reduced dependencies) built for resource-constrained or edge environments — a small self-hosted cluster, IoT devices, or simply a team that wants [Kubernetes](ingress.md) semantics without running the full upstream control-plane stack. It's still real [Kubernetes](ingress.md) (the same APIs, the same manifests apply), just packaged and configured to be lighter to install and operate; a common path for a smaller platform is to run on [Docker Compose](../../containers/docker-compose.md) initially and adopt K3s as the first step into Kubernetes, before moving to a full managed cluster (EKS/GKE/AKS) if scale later demands it.
 
 ## Kubernetes Ecosystem for ML/GPU Workloads
 

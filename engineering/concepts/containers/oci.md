@@ -24,9 +24,9 @@ Before OCI, "container" meant "[Docker](docker.md)" — there was no standard, s
 
 - An image pulled from [Docker](docker.md) Hub can be run by [Docker](docker.md), [Podman](podman.md), containerd, or a [Kubernetes](../distributed-systems/kubernetes/ingress.md) node's `CRI` runtime — all without rebuilding it.
 - `docker build` produces an OCI image. `podman run` can run that exact same image, byte for byte.
-- [Kubernetes](../distributed-systems/kubernetes/ingress.md) doesn't run "Docker containers" — it runs OCI images through whatever OCI-compliant runtime the node uses (commonly `containerd` + `runc`).
+- [Kubernetes](../distributed-systems/kubernetes/ingress.md) doesn't run "[Docker](docker.md) containers" — it runs OCI images through whatever OCI-compliant runtime the node uses (commonly `containerd` + `runc`).
 
-This is the standard that makes "just use Docker's image format, but a different, more secure engine" (i.e. switching to [Podman](podman.md)) a realistic option rather than a rewrite: the image doesn't need to change, only the tool that runs it does.
+This is the standard that makes "just use [Docker](docker.md)'s image format, but a different, more secure engine" (i.e. switching to [Podman](podman.md)) a realistic option rather than a rewrite: the image doesn't need to change, only the tool that runs it does.
 
 ## Image Versioning & Registries
 

@@ -17,7 +17,7 @@ Azure Blob Storage is Microsoft's cloud [object storage](../infrastructure/objec
 
 ## Storage Account Naming
 
-Storage account names are globally unique across Azure, 3–24 lowercase alphanumeric characters, no hyphens.
+Storage account names are globally unique across [Azure](azure.md), 3–24 lowercase alphanumeric characters, no hyphens.
 
 Container names are lowercase, 3–63 characters, hyphens allowed.
 
@@ -29,7 +29,7 @@ Container names are lowercase, 3–63 characters, hyphens allowed.
 | **Account Key**                                                    | Direct key auth ([HMAC](../../security/secrets/hmac.md)-signed) — full admin access, rotate regularly                |
 | **SAS Token**                                                      | Scoped, time-limited access for external clients                     |
 | **[Microsoft Entra ID](microsoft-entra-id.md) / Managed Identity** | Production — no secrets needed; identity-based [RBAC](azure-rbac.md) |
-| **Service Principal**                                              | [CI/CD](../../devops/ci-cd.md), non-Azure apps that need Entra ID auth                        |
+| **Service Principal**                                              | [CI/CD](../../devops/ci-cd.md), non-[Azure](azure.md) apps that need Entra ID auth                        |
 
 Prefer **Managed Identity** in production (no secret rotation needed). Use **connection strings** only locally.
 
